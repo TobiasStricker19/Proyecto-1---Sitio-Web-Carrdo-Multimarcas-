@@ -1,0 +1,779 @@
+
+
+
+/*--------- Reset de CSS ----------*/
+
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+
+/* ---------- Header del index.html || Página principal de inicio ------- */
+
+html {
+    font-size: 5px;
+}
+
+
+.header-index {
+    display: flex; /*Ordena a los elementos del contenedor en una fila y te permite modificar sus caracteristicas a gusto*/
+    align-items: center; /* Hace que todo este en una sola fila alineados hacia el centro*/
+    padding: 2.4rem;
+    justify-content: space-between;
+}
+
+.logo-index {
+    color: aqua;
+    font-size: 10rem;
+    font-family: "Bungee", sans-serif;
+    -webkit-text-stroke: 0.3rem black;
+    font-weight: 900;
+    margin-left: 2rem;
+}
+
+.header-right {
+    align-items: center;
+    display: flex;
+    gap: 7rem;           /*Separacion entre contenedor de la barra de busqueda y de los iconos*/
+}
+
+.search {
+    display:flex;
+    align-items: center;
+    gap: 2rem;
+    border: 1px solid white;
+
+    border-radius: 0.8rem;
+}
+
+.search input {
+    outline: none;
+    font-size: 5rem;
+}
+
+.search input:focus-visible {
+    outline: 1rem solid aqua;
+    outline-offset: 0rem; /*Separa el outline del elemento*/
+    border: 0.8rem solid black;
+    font-family: "Roboto", sans-serif;
+    font-size: 5.6rem;
+}
+
+.search img {
+    width: 6rem;
+    margin-right: 1rem;
+}
+
+.search img:hover {
+    transform: scale(1.2);
+}
+
+.iconos {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+}
+
+.iconos img {
+    width: 6.2rem;
+    cursor: pointer; /*Faltan agregarlos enlaces de los iconos de cuenta y ubiación, y desarrollar el panel del carrito*/
+}
+
+.iconos a:focus-visible {
+    outline: none;
+}
+
+.iconos a:focus-visible img {
+    transform: scale(1.2);
+}
+
+.iconos a:hover img {
+    transform: scale(1.2);
+}
+
+.iconos a:active img {
+    transform: scale(0.95);
+}
+
+
+/* -------- Carrousel de fotos del header del index.html con Bootstrap -------*/
+
+/* Indicadores circulares */
+
+.carousel-item img {
+    height: 110rem;
+}
+
+#carouselExampleIndicators .carousel-indicators [data-bs-target] {
+
+  width: 3rem;
+  height: 3rem;
+
+  /* Esto lo use para que los elementos no se estiren y asi puedan ser circulos en lugar de cuadrados por default como lo proponia el CSS de Bootstrap */
+  flex: 0 0 auto;
+
+  padding-left: 0;
+  margin: 0;
+  border-radius: 50%;
+  background-color: aqua;
+  border: 0.5rem solid black;
+  margin-bottom: 4rem;
+}
+
+#carouselExampleIndicators .carousel-indicators{
+    gap: 4rem;
+    padding-left: 2rem;
+}
+
+#carouselExampleIndicators .carousel-indicators .active{
+    background-color: aqua;
+    border: 0.5rem solid black;
+}
+
+/* Flecha */
+
+.carousel-control-prev, .carousel-control-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* tamaño de flechas */
+
+.carousel-control-prev .carousel-control-prev-icon {
+    width: 15rem;
+    height: 15rem;
+    background-image: url("../images/logo-flecha-izquierda-1.png");
+    pointer-events: auto;
+}
+
+.carousel-control-next .carousel-control-next-icon {
+    width: 15rem;
+    height: 15rem;
+    background-image: url("../images/logo-flecha-derecha-1.png");
+    pointer-events: auto;
+}
+
+/*----------- Menú de navegación de la página principal || index.html -----------*/
+
+.menu-inicio {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12rem;
+    margin-bottom: 10rem;
+    gap: 24rem;
+    padding-bottom: 12rem;
+    padding-left: 15rem;
+    /* justify-content: space-around; Separa los items horizontalmente entre estos aprovechando todo el ancho*/
+}
+
+.menu-inicio a {
+    display: flex;
+    flex-direction: column; /*Logo arriba, texto abajo*/
+    align-items: center; /*Centra cada icono con su texto*/
+    gap: 3rem;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-inicio a:focus-visible {
+    outline: none;
+}
+
+.menu-inicio a:hover img {
+    border: 1.5rem solid black;
+    outline-offset: 0rem;
+    transform: scale(1.2); /*Agranda la imagen*/
+}
+
+.menu-inicio a:focus-visible img {
+    outline: 1rem solid rgba(0, 0, 0, 0.8);
+    outline-offset: 0rem;
+    border: 0.3rem solid rgba(0, 0, 0, 0.8); /*Hace lo mismo que el de arriba pero al navegar con tab u otros mecanismos*/
+    transform: scale(1.2); /*Agranda la imagen*/
+}
+
+.menu-inicio a:active img {
+    transform: scale(0.95);
+}
+
+.menu-inicio a img {
+    width: 22rem;
+    border-radius: 50%;
+    object-fit: contain;
+    border-radius: 100%;
+}
+
+.menu-inicio a span {
+    text-transform: capitalize;
+    font-size: 5.4rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    border: 1rem solid transparent;
+}
+
+
+/*------- Carrousel de prendas de ropa de la página principal || index.html con Bootstrap y Grid -------*/
+
+#carrousel-ropa {
+    padding-top: 3rem;
+    padding-bottom: 15rem;
+    padding-left: 18rem;
+    overflow: hidden;
+}
+
+#carrousel-ropa .container-carrousel-scroll .carousel-slide .carousel-inner .carousel-item {
+    height: auto !important;
+}
+
+.container-carrousel-scroll {
+    max-width: 400rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.card:hover {
+    border: 1.5rem solid black;
+}
+
+.card:active {
+    transform: scale(0.9);
+}
+
+.ropa-card {
+    height: auto;
+}
+
+.card-body {
+    margin-top: auto;
+    height: 15rem;
+    padding: 0.6rem 0.8rem;
+    padding-top: 0.3rem;
+}
+
+.card-title {
+    font-size: 4.5rem;
+    font-family: "Bungee", sans-serif;
+}
+
+.card-text {
+    font-size: 3rem;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0.1rem;
+}
+
+.img-ropa {
+    height: 50rem !important;   
+    width: 100%;
+    object-fit: cover;
+}
+
+#carrousel-ropa .carousel-control-prev-icon,
+#carrousel-ropa .carousel-control-next-icon{
+    width: 10rem;
+    height: 10rem;
+    background-size: contain;
+    pointer-events: auto;
+}
+
+#carrousel-ropa .carousel-control-prev {
+    top: 50%;
+    transform: translateX(-30rem) translateY(-50%);
+    pointer-events: none;
+
+}
+
+#carrousel-ropa .carousel-control-next {
+    top: 50%;
+    transform: translateX(12rem) translateY(-50%);
+    pointer-events: none;
+}
+
+
+/* ---------- Sección de beneficios para TODAS las páginas web del sitio web ---------- */
+
+.seccion-beneficios {
+    width: 100%; /*Hacemos que ocupe todo el ancho de la pagina*/
+    background-color: aqua;
+
+    display: flex;
+    justify-content: space-around; /*Separmos sus secciones con un espacio equitativo entre medio de cada una*/
+    gap: 4rem;
+
+    padding-top: 16rem; 
+    padding-bottom: 16rem; /*Extendemos su altura visual hacia arriba y abajo a gusto, y la separamos de la seccion de abajo a gusto con margin*/
+    margin-bottom: 4rem;
+    padding-left: 4rem;
+}
+
+.beneficio {
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; /*Separamos la imagen del texto*/
+}
+
+.beneficio span {
+    display: flex;
+    flex-direction: column; /*Coloacmos en columna el texto del span de cada beneficio*/
+    font-size: 5rem;
+    font-family: "Roboto", sans-serif;
+    text-transform: lowercase;
+}
+
+.beneficio img {
+    width: 20rem;
+    padding-right: 2rem;
+}
+
+.beneficio img:hover{
+    transform: scale(1.2);
+}
+
+.beneficio strong {
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.logo-present {
+    padding-bottom: 3rem;
+}
+
+/* ---------- Pie de página para TODAS las páginas web del sitio web ---------- */
+
+
+.pie-de-pagina {
+    display: flex; /*Cada hijo se coloca uno al lado del otro*/
+    align-items: flex-start; /*Todos los hijos arrancan de la misma altura*/
+    justify-content: center;
+    padding: 4rem 20rem;
+    width: 100%;
+    gap: 60rem;
+}   
+
+.redes {
+    display: flex; 
+    flex-direction: column;
+}
+
+.redes h3{
+    margin-bottom: 4rem;
+    font-size: 6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.iconos-redes {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.iconos-redes a {
+    display: inline-flex; /*Con esto logramos que el enlace ocupe solo el espacio de su contenedor y no lo sobrepase*/
+}
+
+.iconos-redes a:hover img {
+    transform: scale(1.2);
+}
+
+.iconos-redes a:focus-visible {
+    outline: none;
+}
+
+.iconos-redes a:focus-visible img {
+    transform: scale(1.2);
+}
+
+.iconos-redes a:active img {
+    transform: scale(1);
+}
+
+.link-instagram {
+    width: 10rem;
+    cursor: pointer; /*Fue necesario separar los enlaces de los logos de cada red para ajustar bien el "donde" hacemos click en cada uno, y que no sea una franja clickeable de los 4 logos*/
+}
+
+.link-whatsapp {
+    width: 10rem;
+    cursor: pointer;
+}
+
+.link-facebook {
+    width: 10rem;
+    cursor: pointer;
+}
+
+.link-tiktok {
+    width: 10rem;
+    cursor: pointer;
+}
+
+.medios-de-pago {
+    display: flex;
+    flex-direction: column;
+}
+
+.medios-de-pago h3 {
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.logo-medios {
+    width: 60rem;
+}
+
+.ayuda {
+    display: flex;
+    flex-direction: column;
+}
+
+.ayuda h3{
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.ayuda p {
+    margin-top: 2rem;
+}
+
+.ayuda p a {
+    text-decoration: none;
+    color: black;
+    font-size: 4rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.ayuda p:hover a {
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: 0.8rem;
+    text-underline-offset: 1.1rem;
+}
+
+
+.ayuda p a:focus-visible{
+    outline: none;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: 0.8rem;
+    text-underline-offset: 1.1rem;
+}
+
+
+/* ------------- Header de TODAS las secciones de PAGES -------------- */
+
+.header-pages {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 3rem;
+    grid-template-rows: 17rem auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.logo-pages {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    color: aqua;
+    font-size: 6.5rem;
+    font-family: "Bungee", sans-serif;
+    -webkit-text-stroke: 1.5px black;
+    font-weight: 900;
+    padding-left: 2rem;
+}
+
+.menu-pages {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-content: center;
+    padding-left: 14rem;
+    padding-top: 2rem;
+}
+
+.menu-pages ul {
+    display: flex;
+    list-style: none;
+    gap: 6rem;
+    justify-content: center;
+    line-height: 5rem;
+}
+
+.menu-pages ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 5rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.menu-pages ul li a:focus-visible {
+    outline: none;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: 0.8rem;
+    text-underline-offset: 1.5rem;
+}
+
+.menu-pages ul li:hover {
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: 0.8rem;
+    text-underline-offset: 1.5rem;
+}
+
+
+.iconos-pages {
+    display: flex;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    gap: 8rem;
+    align-items: center;
+    padding-left: 25rem;
+}
+
+.iconos-pages a img {
+    width: 6.4rem;
+    cursor: pointer;
+}
+
+.iconos-pages a:focus-visible {
+    outline: none;
+}
+
+.iconos-pages a:focus-visible img {
+    transform: scale(1.2);
+}
+
+.iconos-pages a:hover img{
+    transform: scale(1.2);
+}
+
+.iconos-pages a:active img {
+    transform: scale(0.95);
+}
+
+.banner-pages {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    width: 100%;
+    height: 110rem;
+}
+
+
+/* ------------------- Sección de CONTACTOS || <main> -----------------*/
+
+
+.lista-de-contactos {
+    max-width: 280rem;
+    margin: 0 auto;
+    margin-bottom: 16rem;
+}
+
+.lista-de-contactos h2 {
+    text-align: center;
+    margin-top: 18rem;
+    margin-bottom: 6rem;
+    font-size: 8rem;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.lista-de-contactos h2 span {
+    display: inline-block;
+}
+
+.lista-de-contactos h2 span:hover{
+    transform: scale(1.3);
+    color: aqua;
+    -webkit-text-stroke: 0.3rem black;
+    text-decoration: underline;
+    text-underline-offset: 2rem;
+    text-decoration-thickness: 0.4rem;
+}
+
+.lista-de-contactos p {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 18rem;
+    font-size: 6.4rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.lista-de-contactos ul {
+    text-align: left;
+    padding-left: 4rem;
+}
+
+.lista-de-contactos ul li {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 6rem;
+    font-size: 6rem;
+    font-family: "Roboto", sans-serif;
+    gap: 3rem;
+}
+
+.lista-de-contactos ul li strong:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.6rem;
+    text-underline-offset: 1.5rem;
+}
+
+.lista-de-contactos ul li strong {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 7rem;
+    color: aqua;
+    -webkit-text-stroke: 0.3rem black;
+}
+
+.lista-de-contactos ul li a img {
+    width: 8rem;
+}
+
+.lista-de-contactos ul li a:focus-visible {
+    outline: none;
+}
+
+.lista-de-contactos ul li a:focus-visible img {
+    transform: scale(1.2);
+}
+
+.lista-de-contactos ul li a img:hover {
+    transform: scale(1.2);
+}
+
+.lista-de-contactos ul li a:active img {
+    transform: scale(1);
+}
+
+.lista-de-contactos ul li input {
+    width: 100rem;
+    height: 7rem;
+    font-size: 5rem;
+    font-family: "Roboto", sans-serif;
+}
+
+/* ----------- Sección de ¿QUIÉNES SOMOS? || <main> ---------- */
+
+.historia {
+    width: 100%;
+    margin-bottom: 12rem;
+}
+
+.historia h2 {
+    text-align: center;
+    margin-top: 18rem;
+    margin-bottom: 20rem;
+    font-size: 8rem;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.historia h2 span {
+    display: inline-block;
+}
+
+.historia h2 span:hover{
+    transform: scale(1.3);
+    color: aqua;
+    -webkit-text-stroke: 0.3rem black;
+    text-decoration: underline;
+    text-underline-offset: 2rem;
+    text-decoration-thickness: 0.4rem;
+}
+
+/* Principio de la historia */
+
+.bloque-principio {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 80rem;
+    margin-bottom: 8rem;
+}
+
+.bloque-principio p {
+    width: 60%;
+    padding: 8rem;
+    line-height: 1.5;
+    font-size: 6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.bloque-principio img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Desarrollo de la historia */
+
+.bloque-desarrollo {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; /*Coloca al reves los hijos de bloque-desarrollo, es decir, primero la imagen y luego el parrafo*/
+
+    width: 100%;
+    min-height: 80rem;
+    margin-bottom: 8rem;
+}
+
+.bloque-desarrollo p {
+    width: 60%;
+    padding: 8rem;
+    line-height: 1.5;
+    font-size: 6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.bloque-desarrollo img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;  /*Hace que la imagen cubra todo su contenedor sin deformarse*/
+}
+
+/* Final de la historia */
+
+.bloque-final {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 80rem;
+}
+
+.bloque-final p {
+    width: 60%;
+    padding: 8rem;
+    line-height: 1.5;
+    font-size: 6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.bloque-final img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.historia section img:hover {
+    transform: scale(1.1);
+}
+
+

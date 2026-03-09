@@ -818,6 +818,7 @@ html {
         grid-column: 1/ 2;
         font-size: 8rem;
         margin-top: 1rem;
+        white-space: nowrap;
     }
 
     .iconos {
@@ -867,7 +868,7 @@ html {
 
         justify-content: center;
         align-items: center;
-        gap: 10rem;
+        gap: 5rem;
         padding-left: 5rem;
         padding-right: 5rem;
     }
@@ -877,7 +878,7 @@ html {
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
         align-items: center;
-        gap: 10rem;
+        gap: 5rem;
     }
 
     .fila-superior a img {
@@ -886,6 +887,7 @@ html {
 
     .fila-superior a span {
         font-size: 7rem;
+        white-space: nowrap;
     }
 
     .fila-inferior {
@@ -894,7 +896,7 @@ html {
         justify-content: center;
         align-items: center;
         margin-right: 12rem;
-        gap: 15rem;
+        gap: 12rem;
     }
 
     .fila-inferior a img {
@@ -962,7 +964,7 @@ html {
 
     .card {
         width: 32%;
-        margin-left:56rem;
+        margin: 0 auto;
     }
 
     .card-body {

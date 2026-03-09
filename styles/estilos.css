@@ -803,7 +803,7 @@ html {
     .header-index {
         display: grid;
         grid-template-rows: 1fr auto;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: auto auto;
         margin-top: 4rem;
         margin-bottom: 5rem;
         row-gap: 3rem;
@@ -905,6 +905,7 @@ html {
 
     .fila-inferior a span {
         font-size: 7rem;
+        white-space: nowrap;
     }
 
     .contactanos {

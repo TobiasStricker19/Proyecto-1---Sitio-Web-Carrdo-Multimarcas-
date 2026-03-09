@@ -816,7 +816,7 @@ html {
     .logo-index {
         grid-row: 1 / 2;
         grid-column: 1/ 2;
-        font-size: 8rem;
+        font-size: 7rem;
         margin-top: 1rem;
         white-space: nowrap;
     }

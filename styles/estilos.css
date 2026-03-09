@@ -803,7 +803,7 @@ html {
     .header-index {
         display: grid;
         grid-template-rows: 1fr auto;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
         margin-top: 4rem;
         margin-bottom: 5rem;
         row-gap: 3rem;

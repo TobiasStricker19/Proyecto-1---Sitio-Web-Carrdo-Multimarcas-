@@ -807,6 +807,7 @@ html {
         margin-top: 4rem;
         margin-bottom: 5rem;
         row-gap: 3rem;
+        column-gap: 7rem;
     }
 
     .header-right {
@@ -819,12 +820,15 @@ html {
         font-size: 8rem;
         margin-top: 1rem;
         white-space: nowrap;
+        justify-self: start;
     }
 
     .iconos {
         grid-row: 1 / 2;
         grid-column: 2 / 3;
         gap: 3rem;
+        justify-self: end;
+        padding-right: 2rem;
     }
 
     .iconos img {

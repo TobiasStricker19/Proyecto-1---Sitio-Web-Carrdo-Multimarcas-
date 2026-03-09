@@ -99,44 +99,50 @@
         </button>
     </div>
     
+    <!-- Sección principal, menú de navegación-->
 
-    <main> <!-- Sección principal, menú de navegación-->
+    <main> 
         <nav class="menu-inicio">
-            <a href="">
-                <img src="images/logo-catalogo.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección catálogo de la tienda online.">
-                <span>Catálogo</span>
-            </a>
 
-            <a href="">
-                <img src="images/logo-outlet.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección outlet de la tienda online.">
-                <span>Outlet</span>
-            </a>
+            <div class="fila-superior">
+                <a href="">
+                    <img src="images/logo-catalogo.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección catálogo de la tienda online.">
+                    <span>Catálogo</span>
+                </a>
 
-            <a href="">
-                <img src="images/logo-novedades.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección novedades de la tienda online.">
-                <span>Novedades</span>
-            </a>
+                <a href="">
+                    <img src="images/logo-outlet.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección outlet de la tienda online.">
+                    <span>Outlet</span>
+                </a>
 
-            <a href="pages/contactanos.html" target="_blank">
-                <img src="images/logo-contactanos.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección Contacto de la tienda online.">
-                <span>Contacto</span>
-            </a>
+                <a href="">
+                    <img src="images/logo-novedades.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección novedades de la tienda online.">
+                    <span>Novedades</span>
+                </a>
+            </div>
 
-            <a href="pages/quienes-somos.html" target="_blank">
-                <img src="images/logo-quienes-somos.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección ¿Quienes somos? de la tienda online.">
-                <span>¿Quiénes somos?</span>
-            </a>
+            <div class="fila-inferior">
+                <a href="pages/contactanos.html" target="_blank" class="contactanos">
+                    <img src="images/logo-contactanos.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección Contacto de la tienda online.">
+                    <span>Contacto</span>
+                </a>
+
+                <a href="pages/quienes-somos.html" target="_blank" class="quienes-somos">
+                    <img src="images/logo-quienes-somos.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección ¿Quienes somos? de la tienda online.">
+                    <span>¿Quiénes somos?</span>
+                </a>                
+            </div>
         </nav>
     </main>
 
-    <!-- Carrousel de ropa de Bootstrap -->
+    <!-- Carrousel de ropa de Bootstrap --- VISTA DESKTOP -->
 
 
-    <section id="carrousel-ropa">
+    <section id="carrousel-ropa-desktop">
 
         <div class="container-carrousel-scroll">
 
-            <div id="carouselExample" class="carousel slide">
+            <div id="carouselExample-desktop" class="carousel slide">
 
                 <div class="carousel-inner">
 
@@ -158,7 +164,7 @@
 
                             <div class="col">
                                 <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
+                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
                                         <p class="card-text">Precio: $14,500</p>
@@ -208,7 +214,7 @@
                             <!-- otras 5 cards -->
                             <div class="col">
                                 <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
+                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
                                         <p class="card-text">Precio: $14,500</p>
@@ -218,7 +224,7 @@
 
                             <div class="col">
                                 <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
+                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
                                         <p class="card-text">Precio: $14,500</p>
@@ -262,11 +268,11 @@
 
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample-desktop" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample-desktop" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -276,7 +282,133 @@
         </div>
     </section>
 
-    <section class="seccion-beneficios"> <!-- Sección de beneficios, fija en cada página.-->
+    <!-- Carrousel de ropa de Bootstrap --- VISTA MOBILE (1 Card por Slide) -->
+
+    <section id="carrousel-ropa-mobile">
+
+        <div class="container-carrousel-scroll">
+
+            <div id="carouselExample-mobile" class="carousel slide">
+
+                <div class="carousel-inner">
+
+                    <!-- SLIDE 1 / CARD 1-->
+                    <div class="carousel-item active">
+
+                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+
+                            <div class="col">
+                                <div class="card ropa-card">
+                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Precio: $14,500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                    </div>
+
+                    <!-- SLIDE 2 / card 2 -->
+                    <div class="carousel-item">
+
+                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+
+                            <div class="col">
+                                <div class="card ropa-card">
+                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Precio: $14,500</p>
+                                    </div>
+                                </div>
+                            </div>    
+
+                        </div>
+
+                    </div>
+
+                    <!-- SLIDE 3 / CARD 3 -->
+
+                    <div class="carousel-item">
+
+                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+
+                            <div class="col">
+                                <div class="card ropa-card">
+                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Precio: $14,500</p>
+                                    </div>
+                                </div>
+                            </div>    
+
+                        </div>
+
+                    </div>
+
+                    <!-- SLIDE 4 / CARD 4 -->
+
+                    <div class="carousel-item">
+
+                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+
+                            <div class="col">
+                                <div class="card ropa-card">
+                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Precio: $14,500</p>
+                                    </div>
+                                </div>
+                            </div>    
+
+                        </div>
+
+                    </div>
+
+                    <!-- SLIDE 5 / CARD 5 -->
+
+                    <div class="carousel-item">
+
+                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+
+                            <div class="col">
+                                <div class="card ropa-card">
+                                    <a href=""><img src="images/foto-remera.webp" class="card-img-top img-ropa"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Precio: $14,500</p>
+                                    </div>
+                                </div>
+                            </div>    
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample-mobile" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample-mobile" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección de beneficios, fija en cada página.-->
+
+    <section class="seccion-beneficios">
 
         <div class="beneficio">
             <img src="images/logo-black-truck.png" alt=""> <span> <strong>Envío gratis</strong> a partir de $100.000 </span>
@@ -296,8 +428,9 @@
         
     </section>
 
+    <!-- Pié de página, fijo en cada página.-->
 
-    <footer class="pie-de-pagina"> <!-- Pié de página, fijo en cada página.-->
+    <footer class="pie-de-pagina">
 
         <nav class="redes"> <!-- Sección de navegación hacia nuestras redes sociales-->
             

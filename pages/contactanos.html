@@ -4,24 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Carrdo Multimarcas / contáctanos </title>
+
+    <!-- Link para conectar el HTML a Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Mi archivo CSS -->
     <link rel="stylesheet" href="../styles/estilos.css">
+
 </head>
 
 <body>
 
     <header class="header-pages">
-    
 
         <h1 class="logo-pages"> Carrdo Multimarcas </h1> <!-- Título en el centro de la página-->
 
-        <nav class="menu-pages"> <!-- Lista de las opciones del menú de navegación desplegable, se trata de las demás secciones del sitio web -->
-            <ul>
-                <li><a href="../index.html" target="_blank">Inicio</a></li>
-                <li><a href="">Catálogo</a></li>
-                <li><a href="">Outlet</a></li>
-                <li><a href="">Novedades</a></li>
-                <li><a href="quienes-somos.html" target="_blank">¿Quiénes somos?</a></li>
-            </ul>
+        <!-- Menú desplegable de Bootstrap -->
+
+        <nav class="navbar navbar-expand-lg navbar-ajustes">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="texto-boton-menu">Menú</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="../index.html" target="_blank">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="">Catálogo</a>
+                        <a class="nav-link" href="">Outlet</a>
+                        <a class="nav-link" href="">Novedades</a>
+                        <a class="nav-link" aria-disabled="true" href="quienes-somos.html" target="_blank">¿Quiénes somos?</a>
+                    </div>
+                </div>
+            </div>
         </nav>
 
         <div class="iconos-pages"> <!--Apartado de items en la esquina superior derecha de la página, misma altura que el título.-->
@@ -53,32 +68,34 @@
 
         <ul>
 
-            <li>
-
+            <li class="redes-sociales-grupo">
+                
                 <strong>Redes sociales:</strong>
 
-                <a href="https://www.instagram.com/carrdo_m_vc/" target="_blank">
-                    <img src="../images/logo-instagram.jpg" alt="Logotipo de Instagram que, al presionarlo, te lleva dicha red social de la tienda.">
-                </a>
+                <div class="redes-iconos-main">
+                    <a href="https://www.instagram.com/carrdo_m_vc/" target="_blank">
+                        <img src="../images/logo-instagram.jpg" alt="Logotipo de Instagram que, al presionarlo, te lleva dicha red social de la tienda.">
+                    </a>
 
-                <a href="https://wa.me/5493400668155" target="_blank">
-                    <img src="../images/logo-whatsapp.jpg" alt="Logotipo de WhatsApp que, al presionarlo, te lleva dicha red social de la tienda.">
-                </a>
+                    <a href="https://wa.me/5493400668155" target="_blank">
+                        <img src="../images/logo-whatsapp.jpg" alt="Logotipo de WhatsApp que, al presionarlo, te lleva dicha red social de la tienda.">
+                    </a>
 
-                <a href="https://www.facebook.com/search/top?q=carrdo" target="_blank">
-                    <img src="../images/logo-facebook.webp" alt="Logotipo de Facebook que, al presionarlo, te lleva dicha red social de la tienda.">
-                </a>
+                    <a href="https://www.facebook.com/search/top?q=carrdo" target="_blank">
+                        <img src="../images/logo-facebook.webp" alt="Logotipo de Facebook que, al presionarlo, te lleva dicha red social de la tienda.">
+                    </a>
 
-                <a href="https://www.tiktok.com/@carrdo.multimarcas.vc?lang=es-419" target="_blank">
-                    <img src="../images/logo-tiktok.jpg" alt="Logotipo de Tiktok que, al presionarlo, te lleva dicha red social de la tienda.">
-                </a>
+                    <a href="https://www.tiktok.com/@carrdo.multimarcas.vc?lang=es-419" target="_blank">
+                        <img src="../images/logo-tiktok.jpg" alt="Logotipo de Tiktok que, al presionarlo, te lleva dicha red social de la tienda.">
+                    </a>
+                </div>
 
             </li>
 
             <li><strong>Correo electrónico:</strong> carrdomultimarcas@gmail.com</li>
             <li><strong>Número telefónico:</strong> +54 9 3400 66-8155 / +54 9 3400 41-6210</li>
             <li><strong>Horarios de la tienda física:</strong> Lunes a sábados: 09:00 Hs - 13:00 Hs / 17:00 Hs - 21:00 Hs (ARG)</li>
-            <li><strong>Recibe todas las novedades:</strong> <input type="email" name="" id=""></li>
+            <li><strong>Recibe todas las novedades:</strong> <input type="email" name="" id="" placeholder="Ingrese su email"></li>
 
         </ul>
     </main>
@@ -144,6 +161,8 @@
         </nav>
         
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>

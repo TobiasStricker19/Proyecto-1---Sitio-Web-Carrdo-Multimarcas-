@@ -33,38 +33,43 @@
 
 <body>
 
-    <header class="header-index"> 
+    <header class="header">
 
-        <h1 class="logo-index"> Carrdo Multimarcas </h1> <!-- Título en la esquina superior izquierda de la página-->
+        <h1 class="logo"> Carrdo Multimarcas </h1> 
 
-        <div class="header-right"> <!--Apartado de items en la esquina superior derecha de la página, misma altura que el título-->
-            
+        <!-- Menú desplegable de Bootstrap -->
 
-            <form class="search" action="/buscar" method="get" role="search">
+        <nav class="navbar navbar-expand-lg navbar-ajustes">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="texto-boton-menu">Menú</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="">Catálogo</a>
+                        <a class="nav-link" aria-current="page" href="">Outlet</a>
+                        <a class="nav-link" href="">Novedades</a>
+                        <a class="nav-link" href="pages/contactanos.html">Contáctanos</a>
+                        <a class="nav-link" aria-disabled="true" href="pages/quienes-somos.html">¿Quiénes somos?</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-                <img src="images/logo-lupa.png" alt="ícono de lupa de busqueda, indica que la barra de busqueda se encuentra a su dercha">
-                <input type="search" placeholder="Buscar productos" aria-label="buscar productos" name="producto-a-buscar">
-            
-            </form>
+        <div class="iconos"> <!--Apartado de items en la esquina superior derecha de la página, misma altura que el título.-->
 
+            <a href="">
+                <img src="images/logo-cuenta.png" alt="ícono que representa la cuenta del usuario en la tienda online, al presionarlo, nos llevará a la sección de registro/log in."> <!--Ícono con un enlace para acceder a la cuenta del usuario en la tienda online.-->
+            </a>
 
-            <!-- Estos 3 íconos estarán presentes en la esquina superior derecha del header de cada página del sitio web.-->
+            <a href="">
+                <img src="images/logo-ubicacion.png" alt="ícono que representa la ubicación física de la tienda onlimne, al presionarlo, nos llevará a la ubicación de la tienda física en Google Maps."> <!--ícono con un enlace que nos llevara a la ubicación de la tienda física en Google Maps--->
+            </a>
 
-            <nav class="iconos">
-
-                <a href="">
-                    <img src="images/logo-cuenta.png" alt="ícono que representa la cuenta del usuario en la tienda online, al presionarlo, nos llevará a la sección de registro/log in."> <!--Ícono con un enlace para acceder a la cuenta del usuario en la tienda online.-->
-                </a>
-
-                <a href="">
-                    <img src="images/logo-ubicacion.png" alt="ícono que representa la ubicación física de la tienda onlimne, al presionarlo, nos llevará a la ubicación de la tienda física en Google Maps."> <!--ícono con un enlace que nos llevara a la ubicación de la tienda física en Google Maps--->
-                </a>
-
-                <a href="">
-                    <img src="images/logo-carrito.png" alt="ícono que representa el carrito de compras de la tienda online, en el cual se almacenan los artículos que seleccionemos, al presionarlo, podremos verlos y ver el monto total."> <!--ícono con un enlace que nos llevará al carrito de compras, donde se almacenarán los productos seleccionados.-->
-                </a>
-
-            </nav>
+            <a href="">
+                <img src="images/logo-carrito.png" alt="ícono que representa el carrito de compras de la tienda online, en el cual se almacenan los artículos que seleccionemos, al presionarlo, podremos verlos y ver el monto total."> <!--ícono con un enlace que nos llevará al carrito de compras, donde se almacenarán los productos seleccionados.-->
+            </a>
 
         </div>
 
@@ -98,45 +103,8 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    
-    <!-- Sección principal, menú de navegación-->
 
-    <main> 
-        <nav class="menu-inicio">
-
-            <div class="fila-superior">
-                <a href="">
-                    <img src="images/logo-catalogo.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección catálogo de la tienda online.">
-                    <span>Catálogo</span>
-                </a>
-
-                <a href="">
-                    <img src="images/logo-outlet.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección outlet de la tienda online.">
-                    <span>Outlet</span>
-                </a>
-
-                <a href="">
-                    <img src="images/logo-novedades.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección novedades de la tienda online.">
-                    <span>Novedades</span>
-                </a>
-            </div>
-
-            <div class="fila-inferior">
-                <a href="pages/contactanos.html" target="_blank" class="contactanos">
-                    <img src="images/logo-contactanos.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección Contacto de la tienda online.">
-                    <span>Contacto</span>
-                </a>
-
-                <a href="pages/quienes-somos.html" target="_blank" class="quienes-somos">
-                    <img src="images/logo-quienes-somos.png" alt="Burbuja que, al presionarla, lo dirigirá a la sección ¿Quienes somos? de la tienda online.">
-                    <span>¿Quiénes somos?</span>
-                </a>                
-            </div>
-        </nav>
-    </main>
-
-    <!-- Carrousel de ropa de Bootstrap --- VISTA DESKTOP -->
-
+    <!-- Carrousel de ropa de Bootstrap --- VISTA DESKTOP --- Cada SLIDE cuenta con 5 cards distintas, las cuales serán prendas de ropa. -->
 
     <section id="carrousel-ropa-desktop">
 
@@ -282,7 +250,88 @@
         </div>
     </section>
 
-    <!-- Carrousel de ropa de Bootstrap --- VISTA MOBILE (1 Card por Slide) -->
+    <!-- Carrousel de ropa de Bootstrap --- VISTA TABLET --- Cada SLIDE cuenta con 2 cards distintas, las cuales serán prendas de ropa. -->
+
+    <section id="carrousel-ropa-tablet">
+
+        <div class="container-carrousel-scroll">
+
+            <div id="carouselExample-tablet" class="carousel slide">
+
+                <div class="carousel-inner">
+
+                    <!-- SLIDE 1 -->
+                    <div class="carousel-item active">
+
+                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+
+                            <!-- 2 CARDS -->
+                            <div class="col">
+                                <div class="card ropa-card">
+                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Precio: $14,500</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card ropa-card">
+                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Precio: $14,500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="carousel-item">
+
+                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+
+                            <!-- otras 2 cards -->
+                            <div class="col">
+                                <div class="card ropa-card">
+                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Precio: $14,500</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card ropa-card">
+                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Precio: $14,500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample-tablet" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample-tablet" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Carrousel de ropa de Bootstrap --- VISTA MOBILE -- Se incluye solo 1 Card por SLIDE, de forma que el carrousel pase de a una card y no solo las primeras de cada SLIDE. -->
 
     <section id="carrousel-ropa-mobile">
 
@@ -464,7 +513,7 @@
 
             <h3>Ayuda</h3>
 
-            <p><a href="pages/contactanos.html" target="_blank">Contacto</a></p>
+            <p><a href="pages/contactanos.html">Contacto</a></p>
             <p><a href="">Devolución</a></p>
             <p><a href="">Ubicación</a></p>
 

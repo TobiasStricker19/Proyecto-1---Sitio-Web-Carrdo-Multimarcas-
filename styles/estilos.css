@@ -12,75 +12,87 @@
 /* ---------------   VISTA DESKTOP ---------------- */
 
 
-/* ---------- Header del index.html || Página principal de inicio ------- */
+/* ---------- Header de las Páginas ------- */
 
 html {
     font-size: 5px;
 }
 
-
-.header-index {
-    display: flex; /*Ordena a los elementos del contenedor en una fila y te permite modificar sus caracteristicas a gusto*/
-    align-items: center; /* Hace que todo este en una sola fila alineados hacia el centro*/
-    padding: 2.4rem;
-    justify-content: space-between;
+.header, .header-pages {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 3rem;
+    grid-template-rows: 17rem auto;
+    align-items: center;
+    justify-content: center;
 }
 
-.logo-index {
+.header-pages {
+    column-gap: 10rem;
+}
+
+.logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
     color: aqua;
-    font-size: 10rem;
+    font-size: 5.1rem;
     font-family: "Bungee", sans-serif;
-    -webkit-text-stroke: 0.3rem black;
+    -webkit-text-stroke: 1.6px black;
     font-weight: 900;
-    margin-left: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
 }
 
-.header-right {
-    align-items: center;
-    display: flex;
-    gap: 7rem;           /*Separacion entre contenedor de la barra de busqueda y de los iconos*/
+.navbar-ajustes {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-left: 20rem;
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
 }
 
-.search {
-    display:flex;
-    align-items: center;
-    gap: 2rem;
-    border: 1px solid white;
-
-    border-radius: 0.8rem;
+.navbar-toggler {
+    display: none;
 }
 
-.search input {
-    outline: none;
+.navbar-ajustes .nav-link {
+    color: black;
     font-size: 5rem;
-}
-
-.search input:focus-visible {
-    outline: 1rem solid aqua;
-    outline-offset: 0rem; /*Separa el outline del elemento*/
-    border: 0.8rem solid black;
     font-family: "Roboto", sans-serif;
-    font-size: 5.6rem;
 }
 
-.search img {
-    width: 6rem;
-    margin-right: 1rem;
+.navbar-nav {
+    gap: 3.5rem;
 }
 
-.search img:hover {
-    transform: scale(1.2);
+.navbar-ajustes .nav-link:focus-visible {
+    outline: none;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: 0.8rem;
+    text-underline-offset: 1.5rem;
+}
+
+.navbar-ajustes .nav-link:hover {
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: 0.8rem;
+    text-underline-offset: 1.5rem;
 }
 
 .iconos {
     display: flex;
-    gap: 5rem;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    gap: 8rem;
     align-items: center;
+    padding-left: 25rem;
 }
 
-.iconos img {
-    width: 6.2rem;
-    cursor: pointer; /*Faltan agregarlos enlaces de los iconos de cuenta y ubiación, y desarrollar el panel del carrito*/
+.iconos a img {
+    width: 6.4rem;
+    cursor: pointer;
 }
 
 .iconos a:focus-visible {
@@ -91,12 +103,19 @@ html {
     transform: scale(1.2);
 }
 
-.iconos a:hover img {
+.iconos a:hover img{
     transform: scale(1.2);
 }
 
 .iconos a:active img {
     transform: scale(0.95);
+}
+
+.banner {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    width: 100%;
+    height: 110rem;
 }
 
 
@@ -106,6 +125,10 @@ html {
 
 .carousel-item img {
     height: 110rem;
+}
+
+#carouselExampleIndicators {
+    margin-bottom: 10rem;
 }
 
 #carouselExampleIndicators .carousel-indicators [data-bs-target] {
@@ -158,75 +181,6 @@ html {
     background-image: url("../images/logo-flecha-derecha-1.png");
     pointer-events: auto;
 }
-
-/*----------- Menú de navegación de la página principal || index.html -----------*/
-
-.menu-inicio {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 12rem;
-    margin-bottom: 10rem;
-    gap: 24rem;
-    padding-bottom: 12rem;
-    padding-left: 15rem;
-    /* justify-content: space-around; Separa los items horizontalmente entre estos aprovechando todo el ancho*/
-}
-
-.menu-inicio a {
-    display: flex;
-    flex-direction: column; /*Logo arriba, texto abajo*/
-    align-items: center; /*Centra cada icono con su texto*/
-    gap: 3rem;
-    text-decoration: none;
-    color: black;
-}
-
-.fila-superior {
-    display: contents;
-}
-
-.fila-inferior {
-    display: contents;
-}
-
-.menu-inicio a:focus-visible {
-    outline: none;
-}
-
-.menu-inicio a:hover img {
-    border: 1.5rem solid black;
-    outline-offset: 0rem;
-    transform: scale(1.2); /*Agranda la imagen*/
-}
-
-.menu-inicio a:focus-visible img {
-    outline: 1rem solid rgba(0, 0, 0, 0.8);
-    outline-offset: 0rem;
-    border: 0.3rem solid rgba(0, 0, 0, 0.8); /*Hace lo mismo que el de arriba pero al navegar con tab u otros mecanismos*/
-    transform: scale(1.2); /*Agranda la imagen*/
-}
-
-.menu-inicio a:active img {
-    transform: scale(0.95);
-}
-
-.menu-inicio a img {
-    width: 22rem;
-    border-radius: 50%;
-    object-fit: contain;
-    border-radius: 100%;
-}
-
-.menu-inicio a span {
-    text-transform: capitalize;
-    font-size: 5.4rem;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    border: 1rem solid transparent;
-}
-
 
 /*------- Carrousel de prendas de ropa de la página principal || index.html con Bootstrap y Grid -------*/
 
@@ -312,6 +266,9 @@ html {
     display: none;
 }
 
+#carrousel-ropa-tablet {
+    display: none;
+}
 
 /* ---------- Sección de beneficios para TODAS las páginas web del sitio web ---------- */
 
@@ -484,105 +441,6 @@ html {
     text-underline-offset: 1.1rem;
 }
 
-
-/* ------------- Header de TODAS las secciones de PAGES -------------- */
-
-.header-pages {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 3rem;
-    grid-template-rows: 17rem auto;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.logo-pages {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-
-    color: aqua;
-    font-size: 6.5rem;
-    font-family: "Bungee", sans-serif;
-    -webkit-text-stroke: 1.5px black;
-    font-weight: 900;
-    padding-left: 2rem;
-}
-
-.navbar-ajustes {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    margin-left: 20rem;
-    margin-top: 2rem;
-    padding-bottom: 1.5rem;
-}
-
-.navbar-toggler {
-    display: none;
-}
-
-.navbar-ajustes .nav-link {
-    color: black;
-    font-size: 5rem;
-    font-family: "Roboto", sans-serif;
-}
-
-.navbar-nav {
-    gap: 3.5rem;
-}
-
-.navbar-ajustes .nav-link:focus-visible {
-    outline: none;
-    text-decoration: underline;
-    text-decoration-color: aqua;
-    text-decoration-thickness: 0.8rem;
-    text-underline-offset: 1.5rem;
-}
-
-.navbar-ajustes .nav-link:hover {
-    text-decoration: underline;
-    text-decoration-color: aqua;
-    text-decoration-thickness: 0.8rem;
-    text-underline-offset: 1.5rem;
-}
-
-.iconos-pages {
-    display: flex;
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-    gap: 8rem;
-    align-items: center;
-    padding-left: 25rem;
-}
-
-.iconos-pages a img {
-    width: 6.4rem;
-    cursor: pointer;
-}
-
-.iconos-pages a:focus-visible {
-    outline: none;
-}
-
-.iconos-pages a:focus-visible img {
-    transform: scale(1.2);
-}
-
-.iconos-pages a:hover img{
-    transform: scale(1.2);
-}
-
-.iconos-pages a:active img {
-    transform: scale(0.95);
-}
-
-.banner-pages {
-    grid-row: 2 / 3;
-    grid-column: 1 / 4;
-    width: 100%;
-    height: 110rem;
-}
-
 /* ------------------- Sección de CONTACTOS || <main> -----------------*/
 
 
@@ -596,7 +454,7 @@ html {
     text-align: center;
     margin-top: 18rem;
     margin-bottom: 6rem;
-    font-size: 8rem;
+    font-size: 10rem;
     font-family: "Bebas Neue", sans-serif;
 }
 
@@ -617,7 +475,7 @@ html {
     text-align: center;
     margin-top: 0;
     margin-bottom: 18rem;
-    font-size: 6.4rem;
+    font-size: 6rem;
     font-family: "Roboto", sans-serif;
 }
 
@@ -631,7 +489,7 @@ html {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 6rem;
-    font-size: 6rem;
+    font-size: 6.5rem;
     font-family: "Roboto", sans-serif;
     gap: 3rem;
 }
@@ -644,14 +502,15 @@ html {
 
 .lista-de-contactos ul li strong {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 7rem;
+    font-size: 8rem;
     color: aqua;
-    -webkit-text-stroke: 0.3rem black;
+    -webkit-text-stroke: 0.1rem black;
 }
 
 .redes-iconos-main {
     display: flex;
     gap: 5rem;
+    padding-bottom: 2rem;
 }
 
 .lista-de-contactos ul li a img {
@@ -675,7 +534,7 @@ html {
 }
 
 .lista-de-contactos ul li input {
-    width: 100rem;
+    width: 170rem;
     height: 7rem;
     font-size: 5rem;
     font-family: "Roboto", sans-serif;
@@ -692,7 +551,7 @@ html {
     text-align: center;
     margin-top: 18rem;
     margin-bottom: 20rem;
-    font-size: 8rem;
+    font-size: 10rem;
     font-family: "Bebas Neue", sans-serif;
 }
 
@@ -798,63 +657,95 @@ html {
     }
 
 
-    /* ---------- Header del index.html || Página principal de inicio ------- */
+    /* ---------- Header de las Páginas ------- */
 
-    .header-index {
+    .header, .header-pages {
         display: grid;
-        grid-template-rows: 1fr auto;
-        grid-template-columns: 1fr 1fr;
-        margin-top: 4rem;
-        margin-bottom: 5rem;
-        row-gap: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr auto;
+        align-items: center;
+        justify-content: center;
         column-gap: 7rem;
+        row-gap: 3rem;  
     }
 
-    .header-right {
-        display: contents;
-    }
-
-    .logo-index {
+    .logo {
+        grid-column: 1 / 4;
         grid-row: 1 / 2;
-        grid-column: 1/ 2;
-        font-size: 8rem;
-        margin-top: 1rem;
-        white-space: nowrap;
-        justify-self: start;
+        font-size: 9rem;
+        justify-self: center;
+        padding-top: 3rem;
     }
 
     .iconos {
-        grid-row: 1 / 2;
-        grid-column: 2 / 3;
-        gap: 3rem;
-        justify-self: end;
-        padding-right: 2rem;
-    }
-
-    .iconos img {
-        width: 9.5rem;
-    }
-
-    .search {
         grid-row: 2 / 3;
-        grid-column: 1 / 3;
+        padding-right: 16rem;
+        gap: 6rem;
+        padding-bottom: 5rem;
     }
 
-    .search input {
-        width: 100%;
-        font-size: 8rem;
-    }
-
-    .search input:focus-visible {
-        outline: 2rem solid aqua;
-        border: 1.5rem solid black;
-        font-size: 8.6rem;
-    }
-
-    .search img {
+    .iconos a img {
         width: 9rem;
     }
 
+    .navbar-ajustes {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        position: relative;
+    }
+
+    .navbar-toggler {
+        justify-self: start;
+        display: flex;
+        border: none;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .texto-boton-menu {
+        display: inline-block;
+        font-size: 9rem;
+        color: black;
+        padding-bottom: 3rem;
+    }
+
+    .texto-boton-menu:hover {
+        transform: scale(1.1);
+    }
+
+    .navbar-toggler-icon {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .navbar-toggler-icon:hover {
+        transform: scale(1.2);
+    }
+
+    .navbar-ajustes .nav-link {
+        font-size: 8rem;
+        padding-right: 10rem;
+    }
+
+    .navbar-collapse{
+        position: absolute;
+        top: 100%;
+        background-color: white;
+        width: 100vw;
+        padding: 0;
+        left: 0;
+        right: 0;
+        box-shadow: -99vw 0 0 0 white;
+        z-index: 3;
+    }
+
+    .banner {
+        grid-row: 3 / 4;
+        grid-column: 1 / 4;
+    }
+    
     /* -------- Carrousel de fotos del header del index.html con Bootstrap -------*/
 
     #carouselExampleIndicators .carousel-indicators [data-bs-target] {
@@ -863,69 +754,13 @@ html {
         border: 1rem solid black;
     }
 
-
-    /*----------- Menú de navegación de la página principal || index.html -----------*/
-
-    .menu-inicio {
-        width: 100%;
-        display: grid;
-        grid-template-rows: repeat(2, auto);
-
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-
-    .fila-superior {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
-    }
-
-    .fila-superior a img {
-        width: 27rem;
-    }
-
-    .fila-superior a span {
-        font-size: 7rem;
-        white-space: nowrap;
-    }
-
-    .fila-inferior {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        align-items: center;
-        margin-right: 12rem;
-        gap: 12rem;
-    }
-
-    .fila-inferior a img {
-        width: 27rem;
-    }
-
-    .fila-inferior a span {
-        font-size: 7rem;
-        white-space: nowrap;
-    }
-
-    .contactanos {
-        grid-column: 1 / 2;
-        justify-self: end;
-    }
-
-    .quienes-somos {
-        grid-column: 2 / 3;
-        justify-self: start;
-    }
-
     /*------- Carrousel de prendas de ropa de la página principal || index.html con Bootstrap y Grid -------*/
 
     #carrousel-ropa-desktop {
+        display: none;
+    }
+
+    #carrousel-ropa-tablet {
         display: none;
     }
 
@@ -944,10 +779,10 @@ html {
 
     #carrousel-ropa-mobile .carousel-control-prev-icon,
     #carrousel-ropa-mobile .carousel-control-next-icon{
-        width: 10rem;
-        height: 10rem;
         background-size: contain;
         pointer-events: auto;
+        width: 18rem;
+        height: 18rem;
     }
 
     #carrousel-ropa-mobile .carousel-control-prev {
@@ -960,12 +795,6 @@ html {
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
         right: 0;
-    }
-    
-    #carrousel-ropa-mobile .carousel-control-prev-icon,
-    #carrousel-ropa-mobile .carousel-control-next-icon{
-        width: 18rem;
-        height: 18rem;
     }
 
     .card {
@@ -1071,93 +900,6 @@ html {
         text-underline-offset: 1.8rem;
     }
 
-    /* ------------- Header de TODAS las secciones de PAGES -------------- */
-
-    .header-pages {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr 1fr auto;
-        align-items: center;
-        justify-content: center;
-        gap: 3rem;
-    }
-
-    .logo-pages {
-        grid-column: 1 / 4;
-        grid-row: 1 / 2;
-        font-size: 11rem;
-        justify-self: center;
-        padding-top: 5rem;
-    }
-
-    .iconos-pages {
-        grid-row: 2 / 3;
-        padding-right: 16rem;
-        gap: 6rem;
-        padding-bottom: 5rem;
-    }
-
-    .iconos-pages a img {
-        width: 9rem;
-    }
-
-    .navbar-ajustes {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-        position: relative;
-    }
-
-    .navbar-toggler {
-        justify-self: start;
-        display: flex;
-        border: none;
-        align-items: center;
-        justify-content: center;
-        gap: 3rem;
-        padding-bottom: 3rem;
-    }
-
-    .texto-boton-menu {
-        display: inline-block;
-        font-size: 9rem;
-        color: black;
-        padding-bottom: 3rem;
-    }
-
-    .texto-boton-menu:hover {
-        transform: scale(1.1);
-    }
-
-    .navbar-toggler-icon {
-        width: 8rem;
-        height: 8rem;
-    }
-
-    .navbar-toggler-icon:hover {
-        transform: scale(1.2);
-    }
-
-    .navbar-ajustes .nav-link {
-        font-size: 8rem;
-        padding-right: 10rem;
-    }
-
-    .navbar-collapse{
-        position: absolute;
-        top: 100%;
-        background-color: white;
-        width: 100vw;
-        padding: 0;
-        left: 0;
-        right: 0;
-        box-shadow: -99vw 0 0 0 white;
-    }
-
-    .banner-pages {
-        grid-row: 3 / 4;
-        grid-column: 1 / 4;
-    }
-
     /* ------------------- Sección de CONTACTOS || <main> -----------------*/
 
     .lista-de-contactos h2 {
@@ -1181,12 +923,17 @@ html {
         align-content: flex-start;
     }
 
+    .lista-de-contactos ul {
+        padding-left: 3rem;
+    }
+
     .lista-de-contactos ul li {
-        font-size: 7rem;
+        font-size: 8rem;
+        gap: 1rem;
     }
 
     .lista-de-contactos ul li strong {
-        font-size: 9rem;
+        font-size: 12rem;
     }
 
     .lista-de-contactos ul li strong:hover {
@@ -1196,6 +943,7 @@ html {
 
     .lista-de-contactos ul li a  img {
         width: 12rem;
+        padding-left: 1rem;
     }
 
     .lista-de-contactos ul li input {
@@ -1265,6 +1013,375 @@ html {
         width: 100%;
         text-align: justify;
         font-size: 7rem;
+    }
+
+    .bloque-final img {
+        width: 85%;
+        height: auto;
+    }
+
+}
+
+/* ---------------   VISTA TABLET ---------------- */
+
+@media (min-width: 650px) and (max-width: 1024px) {
+
+    html {
+        font-size: 4px;
+    }
+
+    /* ---------- Header de las Páginas ------- */
+
+    .header, .header-pages {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 2fr auto;
+        align-items: center;
+        justify-content: center;
+        column-gap: 5rem;
+        row-gap: 6rem;
+    }
+
+
+    .logo {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        font-size: 6rem;
+        padding-top: 6rem;
+        transform: translateX(15%);
+    }
+
+    .iconos {
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+        gap: 6.2rem;
+        padding-top: 5rem;
+        padding-right: 7rem;
+    }
+
+    .iconos a img {
+        width: 8rem;
+    }
+
+    .navbar-ajustes {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        position: relative;
+        padding-top: 6rem;
+        left: -8rem;
+    }
+
+    .navbar-toggler {
+        justify-self: start;
+        display: flex;
+        border: none;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .texto-boton-menu {
+        display: inline-block;
+        font-size: 7.5rem;
+        color: black;
+        padding-bottom: 1rem;
+    }
+
+    .texto-boton-menu:hover {
+        transform: scale(1.1);
+    }
+
+    .navbar-toggler-icon {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .navbar-toggler-icon:hover {
+        transform: scale(1.2);
+    }
+
+    .navbar-ajustes .nav-link {
+        font-size: 6rem;
+        padding-right: 7rem;
+    }
+
+    .navbar-collapse{
+        position: absolute;
+        top: 100%;
+        background-color: white;
+        width: 100vw;
+        padding: 0;
+        left: 0;
+        right: 0;
+        box-shadow: -99vw 0 0 0 white;
+        z-index: 999;
+    }
+
+    .banner {
+        grid-row: 2 / 3;
+        grid-column: 1 / 4;
+    }
+
+    /* -------- Carrousel de fotos del header del index.html con Bootstrap -------*/
+
+    #carouselExampleIndicators .carousel-indicators [data-bs-target] {
+        width: 4rem;
+        height: 4rem;
+        border: 1rem solid black;
+    }
+
+    /*------- Carrousel de prendas de ropa de la página principal || index.html con Bootstrap y Grid -------*/
+
+    #carrousel-ropa-desktop {
+        display: none;
+    }
+
+    #carrousel-ropa-mobile {
+        display: none;
+    }
+
+    #carrousel-ropa-tablet {
+        padding-top: 3rem;
+        padding-bottom: 12rem;
+        padding-left: 18rem;
+        overflow: hidden;
+        padding-left: 0rem;
+        display: block;
+    }
+
+    #carrousel-ropa-tablet .container-carrousel-scroll .carousel-slide .carousel-inner .carousel-item {
+        height: auto !important;
+    }
+
+    #carrousel-ropa-tablet .carousel-control-prev-icon,
+    #carrousel-ropa-tablet .carousel-control-next-icon{
+        width: 15rem;
+        height: 15rem;
+        background-size: contain;
+        pointer-events: auto;
+    }
+
+    #carrousel-ropa-tablet .carousel-control-prev {
+        top: 50%;
+        transform: translateX(10%) translateY(-50%);
+        left: 0;
+    }
+
+    #carrousel-ropa-tablet .carousel-control-next {
+        top: 50%;
+        transform: translateX(-10%) translateY(-50%);
+        right: 0;
+    }
+
+    .card {
+        width: 60%;
+        margin: 0 auto;
+        transform: translateX(80%);
+    }
+
+    .card-body {
+        height: 15rem;
+    }
+
+    .card-title {
+        font-size: 5.5rem;
+    }
+
+    .card-text {
+        font-size: 5rem;
+    }
+
+    .img-ropa {
+        height: 60rem !important;
+    }
+
+    .card:hover {
+        border: 3rem solid black;
+    }
+    
+    /* ---------- Sección de beneficios para TODAS las páginas web del sitio web ---------- */
+
+    .seccion-beneficios {
+        flex-direction: column;
+        gap: 10rem;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        padding-left: 5rem;
+    }
+
+    .beneficio {
+        gap: 5rem;
+    }
+
+    .beneficio span {
+        font-size: 7rem;
+    }
+
+    .beneficio img {
+        width: 25rem;
+    }
+
+    /* ---------- Pie de página para TODAS las páginas web del sitio web ---------- */
+
+    .pie-de-pagina {
+        flex-direction: column;
+        gap: 17rem;
+        padding: 10rem 10rem;
+    }
+
+    .redes h3 {
+        margin-bottom: 5rem;
+        font-size: 10rem;
+    }
+
+    .iconos-redes {
+        gap: 7rem;
+    }
+
+    .link-whatsapp {
+        width: 15rem;
+    }
+
+    .link-instagram {
+        width: 15rem;
+    }
+
+    .link-facebook {
+        width: 15rem;
+    }
+
+    .link-tiktok {
+        width: 15rem;
+    }
+    
+    .medios-de-pago h3 {
+        margin-bottom: 3rem;
+        font-size: 10rem;
+    }
+
+    .logo-medios {
+        width: 100rem;
+    }
+
+    .ayuda h3 {
+        font-size: 10rem;
+        margin-bottom: 3rem;
+    }
+
+    .ayuda p a {
+        font-size: 7rem;
+    }
+
+    .ayuda p:hover a {
+        text-decoration-thickness: 1.5rem;
+        text-underline-offset: 1.8rem;
+    }
+
+    /* ------------------- Sección de CONTACTOS || <main> -----------------*/
+
+    .lista-de-contactos h2 {
+        font-size: 13rem;
+        margin-bottom: 5rem;
+    }
+
+    .lista-de-contactos h2 span:hover {
+        transform: scale(1.2);
+        -webkit-text-stroke: 0.5rem black;
+        text-decoration-thickness: 1rem;
+    }
+
+    .lista-de-contactos p {
+        font-size: 8rem;
+    }
+
+    .lista-de-contactos ul li {
+        font-size: 9rem;
+        gap: 0.7rem;
+    }
+
+    .lista-de-contactos ul li strong {
+        font-size: 12rem;
+        display: block;
+        width: 100%;
+    }
+
+    .lista-de-contactos ul li strong:hover {
+        text-decoration-thickness: 1rem;
+        text-underline-offset: 2rem;
+    }
+
+    .lista-de-contactos ul li a  img {
+        width: 14rem;
+        padding-left: 1rem;
+    }
+
+    .lista-de-contactos ul li input {
+        height: 14rem;
+        width: 170rem;
+        font-size: 9rem;
+    }
+
+    /* ----------- Sección de ¿QUIÉNES SOMOS? || <main> ---------- */
+
+    .historia {
+        margin-bottom: 25rem;
+    }
+
+    .historia h2 {
+        font-size: 13rem;
+        margin-bottom: 15rem;
+    }
+
+    .historia h2 span:hover {
+        transform: scale(1.2);
+        -webkit-text-stroke: 0.5rem black;
+        text-decoration-thickness: 1rem;
+        text-underline-offset: 2rem;
+    }
+
+    .bloque-principio {
+        flex-direction: column;
+        gap: 4rem;
+        margin-bottom: 15rem;
+    }
+
+    .bloque-principio p {
+        width: 100%;
+        text-align: justify;
+        font-size: 8rem;
+    }
+
+    .bloque-principio img {
+        width: 85%;
+        height: auto;
+    }
+
+    .bloque-desarrollo {
+        flex-direction: column;
+        gap: 4rem;
+        margin-bottom: 15rem;
+    }
+
+    .bloque-desarrollo p {
+        width: 100%;
+        text-align: justify;
+        font-size: 8rem;
+    }
+
+    .bloque-desarrollo img {
+        width: 85%;
+        height: auto;
+    }
+
+    .bloque-final {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .bloque-final p {
+        width: 100%;
+        text-align: justify;
+        font-size: 8rem;
     }
 
     .bloque-final img {

@@ -1,0 +1,30 @@
+// Reset de CSS
+@use "base/reset"; //El as * es solo cuando trabajamos código, aqui solo conectamos archivos.
+
+// Header
+@use "base/header";
+
+// index.html
+@use "pages/index";
+
+// Sección de Beneficios, común a todas las pages
+@use "base/beneficios";
+
+// Footer
+@use "base/footer";
+
+// Contáctanos (Main)
+@use "pages/contactanos";
+
+// ¿Quiénes Somos? (Main)
+@use "pages/quienes-somos";
+
+// Vista Tablet --> mq-tablet
+@use "layout/mq-tablet";
+
+// Vista Mobile --> mq-mobile
+@use "layout/mq-mobile";
+
+
+
+

@@ -1,0 +1,353 @@
+// Variables
+@use "../utilities/variables" as *;
+// Mixins
+@use "../utilities/mixins" as *;
+
+// ------------- Vista MOBILE -------------------
+
+@media (max-width: 600px) {
+    
+    html {
+        @include text-style(3px);
+    }
+
+    // HEADER de las páginas
+
+    .header {
+        @include grid(repeat(3, 1fr), 1fr 1fr auto, null, center, center);
+        column-gap: 7rem;
+        row-gap: 3rem;
+    }
+
+    .header-pages {
+        @extend .header;
+    }
+
+    .logo {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        justify-self: center;
+        padding-top: 3rem;
+        @include text-style(9rem);
+    }
+
+    .iconos {
+        grid-row: 2 / 3;
+        gap: 6rem;
+        @include padding(null, 16rem, null, null, 5rem);
+
+        a {
+            img {
+                width: 9rem;
+            }
+        }
+    }
+
+    .navbar-ajustes {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        position: relative;
+
+        .nav-link {
+            padding-right: 10rem;
+            @include text-style(8rem);
+        }
+    }
+
+    .navbar-toggler {
+        justify-self: start;
+        border: none;
+        padding-bottom: 3rem;
+        @include flex(null, center, center, 3rem);
+    }
+
+    .texto-boton-menu {
+        display: inline-block;
+        @include text-style(9rem);
+        color: $color-secundario;
+        padding-bottom: 3rem;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .navbar-toggler-icon {
+        @include size(8rem, 8rem);
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .navbar-collapse {
+        @include collapse();
+    }
+
+    .banner {
+        grid-row: 3 / 4;
+        grid-column: 1 / 4;
+    }
+
+    // Carrousel de fotos del header del index.html con Bootstrap
+
+    #carouselExampleIndicators {
+        .carousel-indicators [data-bs-target] {
+            @include size(4rem, 4rem);
+            border: 1rem solid $color-secundario;
+        }
+    }
+
+    // Carrousel de prendas de ropa de la página principal || index.html con Bootstrap y Grid
+
+    #carrousel-ropa-desktop {
+        display: none;
+    }
+
+    #carrousel-ropa-tablet {
+        @extend #carrousel-ropa-desktop ;
+    }
+
+    #carrousel-ropa-mobile {
+        overflow: hidden;
+        display: block;
+        @include padding(null, null, null, 3rem, 15rem);
+
+        .container-carrousel-scroll {
+            .carousel-slide {
+                .carousel-inner {
+                    .carousel-item {
+                        height: auto !important;
+                    }
+                }
+            }
+        }
+
+        .carousel-control-prev-icon {
+            background-size: contain;
+            pointer-events: auto;
+            @include size(18rem, 18rem);
+        }
+
+        .carousel-control-next-icon {
+            @extend .carousel-control-prev-icon;
+        }
+
+        .carousel-control-prev {
+            top: 50%;
+            left: 0;
+            transform: translateX(50%) translateY(-50%);
+        }
+
+        .carousel-control-next {
+            top: 50%;
+            right: 0;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+
+    .card {
+        @include margin(0 auto);
+        width: 32%;
+
+        &:hover {
+            border: 3rem solid $color-secundario;
+        }
+    }
+
+    .card-body {
+        height: 18rem;
+    }
+
+    .card-title {
+        @include text-style(5.5rem);
+    }
+
+    .card-text {
+        @include text-style(4rem);
+    }
+
+    .img-ropa {
+        height: 60rem !important;
+    }
+
+    // Sección de BENEFICIOS para TODAS las páginas web del sitio web
+
+    .seccion-beneficios {
+        @include flex(column, null, null, 20rem);
+        @include padding(null, null, 5rem, 10rem, 10rem);
+    }
+
+    .beneficio {
+        gap: 4rem;
+
+        span {
+            @include text-style(8rem);
+        }
+
+        img{
+            width: 27rem;
+        }
+    }
+
+    // FOOTER para TODAS las páginas web del sitio web
+
+    .pie-de-pagina {
+        @include padding(10rem 10rem);
+        @include flex(column, null, null, 22rem);
+    }
+
+    .redes {
+        h3 {
+            margin-bottom: 9rem;
+            @include text-style(12rem);
+        }
+    }
+
+    .iconos-redes {
+        gap: 10rem;
+    }
+
+    .link-whatsapp {
+        width: 17rem;
+    }
+
+    .link-instagram {
+        @extend .link-whatsapp;
+    }
+
+    .link-facebook {
+        @extend .link-whatsapp;
+    }
+
+    .link-tiktok {
+        @extend .link-whatsapp;
+    }
+
+    .medios-de-pago {
+        h3 {
+            margin-bottom: 6rem;
+            @include text-style(12rem);
+        }
+    }
+
+    .logo-medios {
+        width: 100rem;
+    }
+
+    .ayuda {
+        h3 {
+            margin-bottom: 3rem;
+            @include text-style(12rem);
+        }
+
+        p {
+            a {
+                @include text-style(8rem);
+            }
+
+            &:hover {
+                a {
+                    @include underline(null, null, null, 1.5rem, 1.8rem);
+                }
+            }
+        }
+    } 
+
+    // Sección de CONTACTOS || <main>
+
+    .lista-de-contactos {
+        h2 {
+            @include text-style(12rem);
+            margin-bottom: 5rem;
+
+            span {
+                &:hover {
+                    @include text-style(null, 0.4rem $color-secundario);
+                    transform: scale(1.2);
+                    text-decoration-thickness: 0.6rem;
+                }
+            }
+        }
+
+        p {
+            @include text-style(6rem);
+        }
+
+        ul {
+            padding-left: 3rem;
+
+            li {
+                @include text-style(8rem);
+                gap: 1rem;
+
+                strong {
+                    @include text-style(12rem);
+
+                    &:hover {
+                        @include underline(null, null, null, 0.8rem, 2rem);
+                    }
+                }
+
+                a {
+                    img {
+                        padding-left: 1rem;
+                        width: 12rem;
+                    }
+                }
+
+                input {
+                    @include text-style(7rem);
+                    @include size(130rem, 10rem);
+                }
+            }
+        }
+    }
+
+    .redes-sociales-grupo {
+        @include flex(column);
+        align-content: flex-start;
+    }
+
+    // Sección de ¿QUIÉNES SOMOS? || <main> 
+
+    .historia {
+        margin-bottom: 20rem;
+
+        h2 {
+            margin-bottom: 15rem;
+            @include text-style(12rem);
+
+            span {
+                &:hover {
+                    transform: scale(1.2);
+                    @include text-style(null, 0.4rem $color-secundario);
+                    @include underline(null, null, null, 0.6rem, 4rem);
+                }
+            }
+        }
+    }
+
+    .bloque-principio {
+        @include flex(column, null, null, 8rem);
+        margin-bottom: 12rem;
+
+        p {
+            text-align: justify;
+            width: 100%;
+            @include text-style(7rem);
+        }
+
+        img {
+            @include size(85%, auto);
+        }
+    }
+
+    .bloque-desarrollo {
+        @extend .bloque-principio;
+    }
+
+    .bloque-final {
+        @extend .bloque-principio;
+    }
+}

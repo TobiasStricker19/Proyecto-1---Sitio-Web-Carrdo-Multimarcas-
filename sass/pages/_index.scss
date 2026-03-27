@@ -1,0 +1,151 @@
+// Variables
+@use "../utilities/variables" as *;
+// Mixins
+@use "../utilities/mixins" as *;
+
+// Carrousel de fotos del header del index.html con Bootstrap
+
+// Indicadores circulares
+
+.carousel-item {
+    img {
+        height: 110rem;
+    }
+}
+
+#carouselExampleIndicators {
+    margin-bottom: 10rem;
+    
+    .carousel-indicators [data-bs-target] {
+        @include size (3rem, 3rem);
+        flex: 0 0 auto;
+
+        padding-left: 0;
+        border-radius: 50%;
+        background-color: $color-primario;
+        border: 0.5rem solid black;
+        @include margin (0, null, null, null, 4rem);
+    }
+
+    .carousel-indicators {
+        gap: 4rem;
+        padding-left: 2rem;
+
+        .active {
+            background-color: $color-primario;
+            border: 0.5rem solid black;
+        }
+    }
+}
+
+// Flechas
+
+.carousel-control-prev {
+    @include flex (null, center, center, null, null);
+    pointer-events: none;
+
+    .carousel-control-prev-icon {
+        @include size (15rem, 15rem);
+        background-image: url("../images/logo-flecha-izquierda-1.png");
+        pointer-events: auto;
+    }
+}
+
+.carousel-control-next {
+    @include flex (null, center, center, null, null);
+    pointer-events: none;
+
+    .carousel-control-next-icon {
+        @include size (15rem, 15rem);
+        background-image: url("../images/logo-flecha-derecha-1.png");
+        pointer-events: auto;
+    }
+}
+
+// Carrousel de prendas de ropa de la  página principal || index.html
+
+#carrousel-ropa-desktop {
+    overflow: hidden;
+    @include padding (null, null, 18rem, 3rem, 15rem);
+
+    .container-carrousel-scroll {
+
+        max-width: 400rem;
+        width: 100%;
+        margin: 0 auto;
+
+        .carousel-slide {
+            .carousel-inner {
+                .carousel-item {
+                    height: auto !important;
+                }
+            }
+        }
+    }
+
+    .carousel-control-prev-icon {
+        @include size(10rem, 10rem);
+        background-size: contain;
+        pointer-events: auto;
+    }
+    .carousel-control-next-icon {
+        @extend .carousel-control-prev-icon;
+    }
+    .carousel-control-prev {
+        top: 50%;
+        transform: translateX(-30rem) translateY(-50%);
+    }
+    .carousel-control-next {
+        top: 50%;
+        transform: translateX(12rem) translateY(-50%);
+    }
+}
+
+.card {
+    width: 70%;
+    @include flex (column);
+    cursor: pointer;
+
+    &:active {
+        transform: scale(0.9);
+    }
+    &:hover {
+        border: 1.5rem solid black;
+    }
+}
+
+.ropa-card {
+    height: auto;
+}
+
+.card-body {
+    margin-top: auto;
+    height: 15rem;
+    @include padding(0.6rem 0.8rem, null, null, 0.3rem);
+}
+
+.card-title {
+    @include text-style(4.5rem);
+    font-family: "Bungee", sans-serif;
+}
+
+.card-text {
+    @include text-style(3rem);
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0.1rem;
+}
+
+.img-ropa {
+    @include size (100%, 50rem !important);
+    object-fit: cover;
+}
+
+#carrousel-ropa-mobile {
+    display: none;
+}
+
+#carrousel-ropa-tablet {
+    @extend #carrousel-ropa-mobile ;
+}
+
+

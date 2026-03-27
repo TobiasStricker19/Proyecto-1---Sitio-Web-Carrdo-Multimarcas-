@@ -1,0 +1,135 @@
+// Variables
+@use "_variables.scss" as *;
+// Mixins
+
+@mixin flex ($direction:null, $justify-content:null, $align-items:null, $gap:null, $wrap:null) {
+    display: flex;
+    
+    @if $direction != null {
+        flex-direction: $direction;
+    }
+
+    @if $justify-content != null {
+        justify-content: $justify-content;
+    }
+
+    @if $align-items != null {
+        align-items: $align-items;
+    }
+
+    @if $gap != null {
+        gap: $gap;
+    }
+
+    @if $wrap != null {
+        flex-wrap: $wrap;
+    }
+}
+
+@mixin grid ($col: null, $row:null, $gap:null, $justify-content:null, $align-items: null) {
+    display: grid;
+
+    @if $col != null {
+        grid-template-columns: $col;
+    }
+
+    @if $row != null {
+        grid-template-rows: $row;
+    }
+
+    @if $gap != null {
+        gap: $gap;
+    }
+
+    @if $justify-content != null {
+        justify-content: $justify-content;
+    }
+
+    @if $align-items != null {
+        align-items: $align-items;
+    }
+}
+
+@mixin text-style ($font-size:null, $stroke:null, $weight:null) {
+
+    @if $font-size != null {
+        font-size: $font-size;
+    }
+    @if $stroke != null {
+        -webkit-text-stroke: $stroke;
+    }
+    @if $weight != null {
+        font-weight: $weight;
+    }
+
+}
+
+@mixin underline ($outline, $text-deco, $text-deco-color, $text-deco-thick, $text-underline-offset) {
+    outline: $outline;
+    text-decoration: $text-deco;
+    text-decoration-color: $text-deco-color;
+    text-decoration-thickness: $text-deco-thick;
+    text-underline-offset: $text-underline-offset;
+}
+
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin padding ($padding:null, $right:null, $left:null, $top:null, $bottom:null) {
+    
+    @if $padding != null {
+        padding: $padding;
+    }
+
+    @if $right != null {
+        padding-right: $right;
+    }
+
+    @if $left != null {
+        padding-left: $left;
+    }
+
+    @if $top != null {
+        padding-top: $top;
+    }
+
+    @if $bottom != null {
+        padding-bottom: $bottom;
+    }
+}
+
+@mixin margin ($margin:null, $right:null, $left:null, $top:null, $bottom:null) {
+    @if $margin != null {
+        margin: $margin;
+    }
+
+    @if $right != null {
+        margin-right: $right;
+    }
+
+    @if $left != null {
+        margin-left: $left;
+    }
+
+    @if $top != null {
+        margin-top: $top;
+    }
+
+    @if $bottom != null {
+        margin-bottom: $bottom;
+    }
+}
+
+@mixin collapse {
+    position: absolute;
+    top: 100%;
+    background-color: $color-bg-collapse;
+    width: 100vw;
+    @include padding(0);
+    left: 0;
+    right: 0;
+    box-shadow: -99vw 0 0 0 $color-bg-collapse;
+    z-index: 999;
+}

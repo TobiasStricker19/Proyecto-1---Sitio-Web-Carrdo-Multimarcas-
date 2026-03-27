@@ -1,0 +1,41 @@
+// Variables
+@use "../utilities/variables" as *;
+// Mixins
+@use "../utilities/mixins" as *;
+
+.seccion-beneficios {
+    width: 100%;
+    background-color: $color-primario;
+    @include flex(null, space-around, null, 4rem, null);
+    @include padding(null, null, 4rem, 16rem, 16rem);
+    margin-bottom: 4rem;
+}
+
+.beneficio {
+    @include flex(null, null, center, 1rem, null);
+
+    span {
+        @include flex(column);
+        @include text-style(5rem);
+        font-family: "Roboto", sans-serif;
+        text-transform: lowercase;
+    }
+
+    img {
+        width: 20rem;
+        padding-right: 2rem;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    strong {
+        font-weight: 900;
+        text-transform: capitalize;
+    }
+}
+
+.logo-present {
+    padding-bottom: 3rem;
+}

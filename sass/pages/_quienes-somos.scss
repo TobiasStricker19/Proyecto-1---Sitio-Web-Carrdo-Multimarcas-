@@ -1,0 +1,66 @@
+// Variables 
+@use "../utilities/variables" as *;
+// Mixins
+@use "../utilities/mixins" as *;
+
+.historia {
+    width: 100%;
+    margin-bottom: 12rem;
+    
+    h2 {
+        font-family: "Bebas Neue", sans-serif;
+        text-align: center;
+        @include text-style(10rem);
+        @include margin(null, null, null, 18rem, 20rem); 
+        
+        span {
+            display: inline-block;
+
+            &:hover {
+                transform: scale(1.3);
+                color: $color-primario;
+                @include text-style(null, 0.3rem black);
+                @include underline(none, underline, none, 0.4rem, 2rem);
+            }
+        }
+    }
+    
+    section {
+        img {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.bloque-principio {
+    min-height: 80rem;
+    margin-bottom: 8rem;
+    width: 100%;
+    @include flex(null, null, center);
+
+    p {
+        width: 60%;
+        @include padding(8rem);
+        line-height: 1.5;
+        font-family: "Roboto", sans-serif;
+        @include text-style(6rem);
+    }
+
+    img {
+        @include size(40%, 100%);
+        object-fit: cover;
+    }
+}
+
+.bloque-desarrollo {
+    @extend .bloque-principio;
+    flex-direction: row-reverse;
+}
+
+.bloque-final {
+    @extend .bloque-principio;
+    margin-bottom: 0;
+}
+

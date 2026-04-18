@@ -154,7 +154,7 @@
         width: 60%;
 
         &:hover {
-            border: 3rem solid $color-secundario;
+            border: 1.5rem solid $color-secundario;
         }
     }
 
@@ -344,5 +344,122 @@
 
     .bloque-final {
         @extend .bloque-principio;
+    }
+
+    // Sección del Catálogo (MAIN)
+
+    .menu-catalogo {
+        ul {
+            max-width: 200rem;
+            @include margin(0 auto);
+
+            .item-catalogo {
+
+                :hover {
+                    a {
+                        @include underline(none, underline, $color-primario, 1rem, 1.5rem);
+                        color: $color-secundario;
+                    }
+                }
+
+                :focus-visible {
+                    a {
+                        @include underline(none, underline, $color-primario, 1rem, 1.5rem);
+                        color: $color-secundario;
+                    }
+                }
+
+                a {
+                    @include text-style(6rem);
+                }
+            }
+        }
+
+        .fila-ropa-desktop {
+            display: none;
+        }
+
+        .fila-ropa-mobile {
+            display: none;
+        }
+
+        #fila-tablet {
+            @include flex(null, null, null,  3rem);
+            margin-top: 7rem;
+            max-width: 100%;
+            padding-right: 5rem;
+
+            .col {
+                .ropa-card {
+                    .img-catalogo {
+                        @include size(100%, 50rem !important);
+                        object-fit: cover;
+                    }
+                    .card-body {
+                        .card-title {
+                            @include text-style(4.5rem);
+                            font-family: "Bungee", sans-serif;
+                        }
+                        .card-text {
+                            @include text-style(3rem);
+                            font-family: "Roboto", sans-serif;
+                            margin-bottom: 0.1rem;
+                            text-align: start;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn-personalizado {
+            .btn {
+                transform: translateX(-70%);
+            }
+        }
+    }
+
+    .outlet {
+        .fila-ropa-desktop {
+            display: none;
+        }
+        .fila-ropa-mobile {
+            display: none;
+        }
+
+        #fila-tablet {
+            @include flex(null, null, null, 3rem);
+            margin-top: 7rem;
+            max-width: 100%;
+            padding-right: 2rem;
+
+            .col {
+                .ropa-card {
+
+                    .card-body {
+                        .card-title {
+                            @include text-style(4.5rem);
+                            font-family: "Bungee", sans-serif;
+                        }
+                        .card-text {
+                            @include text-style(3.5rem);
+                            font-family: "Roboto", sans-serif;
+                            margin-bottom: 0.1rem;
+                            text-align: start;
+                        }
+                    }
+
+                    .img-catalogo {
+                        @include size(100%, 50rem !important);
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        .btn-personalizado {
+            .btn {
+                transform: translateX(-60%);
+            }
+        }
     }
 }

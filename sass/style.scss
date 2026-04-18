@@ -19,6 +19,12 @@
 // ¿Quiénes Somos? (Main)
 @use "pages/quienes-somos";
 
+// Catálogo (Main)
+@use "pages/catalogo";
+
+// Outlet (Main)
+@use "pages/outlet";
+
 // Vista Tablet --> mq-tablet
 @use "layout/mq-tablet";
 

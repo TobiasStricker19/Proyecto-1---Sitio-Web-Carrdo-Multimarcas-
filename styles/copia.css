@@ -502,156 +502,6 @@ html {
   margin-bottom: 0;
 }
 
-.header-catalogo {
-  column-gap: 6rem;
-}
-
-.menu-catalogo {
-  margin-top: 16rem;
-  margin-bottom: 16rem;
-}
-.menu-catalogo ul {
-  display: flex;
-  gap: 10rem;
-}
-.menu-catalogo ul .item-catalogo a {
-  font-size: 5rem;
-  color: black;
-  font-family: "Roboto", sans-serif;
-}
-.menu-catalogo ul .item-catalogo a:hover {
-  outline: none;
-  text-decoration: underline;
-  text-decoration-color: aqua;
-  text-decoration-thickness: 0.8rem;
-  text-underline-offset: 1.5rem;
-  color: black;
-}
-.menu-catalogo ul .item-catalogo a:focus-visible {
-  outline: none;
-  text-decoration: underline;
-  text-decoration-color: aqua;
-  text-decoration-thickness: 0.8rem;
-  text-underline-offset: 1.5rem;
-  color: black;
-}
-.menu-catalogo .fila-ropa-desktop {
-  max-width: 100%;
-  margin-top: 12rem;
-  padding-left: 16rem;
-}
-.menu-catalogo .fila-ropa-desktop .col .ropa-card .img-catalogo {
-  width: 100%;
-  height: 50rem !important;
-  object-fit: cover;
-}
-.menu-catalogo .fila-ropa-tablet {
-  display: none;
-}
-.menu-catalogo .fila-ropa-mobile {
-  display: none;
-}
-.menu-catalogo .btn-personalizado .btn {
-  margin-left: 58rem;
-  margin-top: 15rem;
-  border-radius: 10rem;
-  font-size: 5rem;
-  font-weight: 500;
-  font-family: "Roboto", sans-serif;
-  color: black;
-  padding: 4rem;
-  width: 40rem;
-  background-color: aqua;
-  border: 1rem solid black;
-}
-.menu-catalogo .btn-personalizado .btn:hover {
-  border: 1rem solid aqua;
-  color: aqua;
-  background-color: black;
-}
-
-.outlet {
-  margin: 0 auto;
-  margin-bottom: 16rem;
-  max-width: 100%;
-}
-.outlet h2 {
-  font-size: 10rem;
-  margin-top: 18rem;
-  margin-bottom: 6rem;
-  font-family: "Bebas Neue", sans-serif;
-  text-align: center;
-}
-.outlet h2 span {
-  display: inline-block;
-}
-.outlet h2 span:hover {
-  outline: none;
-  text-decoration: underline;
-  text-decoration-color: none;
-  text-decoration-thickness: 0.4rem;
-  text-underline-offset: 2rem;
-  color: aqua;
-  transform: scale(1.3);
-  -webkit-text-stroke: 0.3rem black;
-}
-.outlet p {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 6rem;
-  margin-top: 0;
-  margin-bottom: 18rem;
-}
-.outlet .fila-ropa-desktop {
-  max-width: 100%;
-  margin-top: 12rem;
-  padding-left: 16rem;
-}
-.outlet .fila-ropa-desktop .col .ropa-card {
-  width: 70%;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-}
-.outlet .fila-ropa-desktop .col .ropa-card .img-catalogo {
-  width: 100%;
-  height: 50rem !important;
-  object-fit: cover;
-}
-.outlet .fila-ropa-desktop .col .ropa-card .card-body .card-title {
-  font-size: 4.5rem;
-  font-family: "Bungee", sans-serif;
-}
-.outlet .fila-ropa-desktop .col .ropa-card .card-body .card-text {
-  font-family: "Roboto", sans-serif;
-  margin-bottom: 0.1rem;
-  text-align: start;
-  font-size: 3rem;
-}
-.outlet .fila-ropa-mobile {
-  display: none;
-}
-.outlet .fila-ropa-tablet {
-  display: none;
-}
-.outlet .btn-personalizado .btn {
-  border-radius: 10rem;
-  font-size: 5rem;
-  -webkit-text-stroke: 500;
-  margin-left: 56rem;
-  margin-top: 15rem;
-  background-color: aqua;
-  border: 1rem solid black;
-  color: black;
-  padding: 4rem;
-  width: 40rem;
-}
-.outlet .btn-personalizado .btn:hover {
-  border: 1rem solid aqua;
-  color: aqua;
-  background-color: black;
-}
-
 @media (min-width: 650px) and (max-width: 1024px) {
   html {
     font-size: 4px;
@@ -894,91 +744,54 @@ html {
     width: 85%;
     height: auto;
   }
-  .menu-catalogo ul {
+
+  .menu-catalogo .nav {
     max-width: 200rem;
     margin: 0 auto;
   }
-  .menu-catalogo ul .item-catalogo :hover a {
-    outline: none;
-    text-decoration: underline;
-    text-decoration-color: aqua;
-    text-decoration-thickness: 1rem;
-    text-underline-offset: 1.5rem;
-    color: black;
-  }
-  .menu-catalogo ul .item-catalogo :focus-visible a {
-    outline: none;
-    text-decoration: underline;
-    text-decoration-color: aqua;
-    text-decoration-thickness: 1rem;
-    text-underline-offset: 1.5rem;
-    color: black;
-  }
-  .menu-catalogo ul .item-catalogo a {
+
+  .menu-catalogo .item-catalogo a {
     font-size: 6rem;
   }
+
   .menu-catalogo .fila-ropa-desktop {
     display: none;
   }
+
   .menu-catalogo .fila-ropa-mobile {
     display: none;
   }
-  .menu-catalogo #fila-tablet {
+
+  .menu-catalogo .fila-ropa-tablet {
     display: flex;
     gap: 3rem;
     margin-top: 7rem;
     max-width: 100%;
     padding-right: 5rem;
   }
-  .menu-catalogo #fila-tablet .col .ropa-card .img-catalogo {
-    width: 100%;
-    height: 50rem !important;
-    object-fit: cover;
-  }
-  .menu-catalogo #fila-tablet .col .ropa-card .card-body .card-title {
-    font-size: 4.5rem;
-    font-family: "Bungee", sans-serif;
-  }
-  .menu-catalogo #fila-tablet .col .ropa-card .card-body .card-text {
-    font-size: 3rem;
-    font-family: "Roboto", sans-serif;
-    margin-bottom: 0.1rem;
-    text-align: start;
-  }
+
   .menu-catalogo .btn-personalizado .btn {
     transform: translateX(-70%);
   }
-  .outlet .fila-ropa-desktop {
-    display: none;
+
+  .menu-catalogo .item-catalogo:hover a {
+    outline: none;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: 1rem;
+    text-underline-offset: 1.5rem;
   }
-  .outlet .fila-ropa-mobile {
-    display: none;
+
+  .menu-catalogo .item-catalogo:focus-visible a {
+    outline: none;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: 1rem;
+    text-underline-offset: 1.5rem;
   }
-  .outlet #fila-tablet {
-    display: flex;
-    gap: 3rem;
-    margin-top: 7rem;
-    max-width: 100%;
-    padding-right: 2rem;
-  }
-  .outlet #fila-tablet .col .ropa-card .card-body .card-title {
-    font-size: 4.5rem;
-    font-family: "Bungee", sans-serif;
-  }
-  .outlet #fila-tablet .col .ropa-card .card-body .card-text {
-    font-size: 3.5rem;
-    font-family: "Roboto", sans-serif;
-    margin-bottom: 0.1rem;
-    text-align: start;
-  }
-  .outlet #fila-tablet .col .ropa-card .img-catalogo {
-    width: 100%;
-    height: 50rem !important;
-    object-fit: cover;
-  }
-  .outlet .btn-personalizado .btn {
-    transform: translateX(-60%);
-  }
+  
 }
 @media (max-width: 600px) {
   html {
@@ -1229,78 +1042,132 @@ html {
     width: 85%;
     height: auto;
   }
-  .menu-catalogo ul {
+
+  .menu-catalogo .nav {
     max-width: 100%;
   }
-  .menu-catalogo ul .item-catalogo a {
-    font-size: 4.5rem;
+
+  .menu-catalogo .item-catalogo a {
+    font-size: 5rem;
   }
-  .menu-catalogo ul .item-catalogo a:hover {
-    outline: none;
-    text-decoration: underline;
-    text-decoration-color: aqua;
-    text-decoration-thickness: 1rem;
-    text-underline-offset: 1.5rem;
-    color: black;
-  }
-  .menu-catalogo ul .item-catalogo a:focus-visible {
-    outline: none;
-    text-decoration: underline;
-    text-decoration-color: aqua;
-    text-decoration-thickness: 1rem;
-    text-underline-offset: 1.5rem;
-    color: black;
-  }
+
   .menu-catalogo .fila-ropa-desktop {
     display: none;
   }
+
   .menu-catalogo .fila-ropa-tablet {
     display: none;
   }
+
   .menu-catalogo .fila-ropa-mobile {
     display: flex;
     flex-direction: column;
     margin-top: 9rem;
     max-width: 100%;
   }
-  .menu-catalogo .fila-ropa-mobile .col .ropa-card .img-catalogo {
-    width: 100%;
-    height: 50rem !important;
-    object-fit: cover;
-  }
+
   .menu-catalogo .btn-personalizado .btn {
     transform: translateX(-110%);
   }
-  .outlet .fila-ropa-desktop {
-    display: none;
+
+  .menu-catalogo .item-catalogo:hover a {
+    outline: none;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: 1rem;
+    text-underline-offset: 1.5rem;
   }
-  .outlet #fila-tablet {
-    display: none;
+
+  .menu-catalogo .item-catalogo:focus-visible a {
+    outline: none;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: 1rem;
+    text-underline-offset: 1.5rem;
   }
-  .outlet #fila-mobile {
-    display: flex;
-    flex-direction: column;
-    margin-top: 9rem;
-    max-width: 100%;
-  }
-  .outlet #fila-mobile .col .ropa-card .img-catalogo {
-    width: 100%;
-    height: 50rem !important;
-    object-fit: cover;
-  }
-  .outlet #fila-mobile .col .card-body .card-text {
-    font-family: "Roboto", sans-serif;
-    margin-bottom: 0.1rem;
-    text-align: start;
-    font-size: 3.5rem;
-  }
-  .outlet #fila-mobile .col .card-body .card-title {
-    font-size: 4.5rem;
-    font-family: "Bungee", sans-serif;
-  }
-  .outlet .btn-personalizado .btn {
-    transform: translateX(-110%);
-  }
+
 }
 
 /*# sourceMappingURL=estilos.css.map */
+
+.header-catalogo {
+  column-gap: 6rem;
+}
+
+.menu-catalogo {
+  margin-bottom: 16rem;
+  margin-top: 16rem;
+}
+
+.menu-catalogo ul {
+  display: flex;
+  gap: 10rem;
+}
+
+.item-catalogo a {
+  font-size: 5rem;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+.item-catalogo:hover a {
+  outline: none;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: aqua;
+  text-decoration-thickness: 0.8rem;
+  text-underline-offset: 1.5rem;
+}
+
+.item-catalogo:focus-visible a {
+  outline: none;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: aqua;
+  text-decoration-thickness: 0.8rem;
+  text-underline-offset: 1.5rem;
+}
+
+.fila-ropa-desktop {
+  max-width: 100%;
+  margin-top: 12rem;
+  padding-left: 16rem;
+}
+
+.fila-ropa-tablet {
+  display: none;
+}
+
+.fila-ropa-mobile {
+  display: none;
+}
+
+.img-catalogo {
+  width: 100%;
+  height: 50rem !important;
+  object-fit: cover;
+}
+
+.menu-catalogo .btn-personalizado .btn {
+  margin-top: 15rem;
+  width: 40rem;
+  padding: 4rem;
+  border-radius: 10rem;
+  font-size: 5rem;
+  margin-left: 58rem;
+
+  color: black;
+  font-family: "Roboto", sans-serif;
+  background-color: aqua;
+  border: 1rem solid black;
+  font-weight: 500;
+}
+
+.menu-catalogo .btn-personalizado .btn:hover {
+    background-color: black;
+    color: aqua;
+    border: 1rem solid aqua;
+}
+

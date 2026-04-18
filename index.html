@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre tu propio estilo en Carrdo Multimarcas - ropa de hombre">
     <title> Carrdo Multimarcas / página de inicio </title>
 
     <!-- Fuente para los titulos (h1) -->
@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Gravitas+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-    <!-- Fuente para los párrafos y h3 -->
+    <!-- Fuente para los párrafos (h3) -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,9 +47,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" aria-current="page" href="">Catálogo</a>
-                        <a class="nav-link" aria-current="page" href="">Outlet</a>
-                        <a class="nav-link" href="">Novedades</a>
+                        <a class="nav-link" aria-current="page" href="pages/catalogo.html">Catálogo</a>
+                        <a class="nav-link" aria-current="page" href="pages/outlet.html">Outlet</a>
                         <a class="nav-link" href="pages/contactanos.html">Contáctanos</a>
                         <a class="nav-link" aria-disabled="true" href="pages/quienes-somos.html">¿Quiénes somos?</a>
                     </div>
@@ -85,13 +84,13 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/foto-local-provisional.webp" class="d-block w-100" alt="...">
+                <img src="images/foto-local-provisional.webp" class="d-block w-100" alt="Imágen de fondo del carrousel, en esta se visualiza la fachada de la tienda física.">
             </div>
             <div class="carousel-item">
-                <img src="images/foto-local-provisional.webp" class="d-block w-100" alt="...">
+                <img src="images/foto-local-provisional.webp" class="d-block w-100" alt="Imágen de fondo del carrousel, en esta se visualizan diversas prendas de vestir para hombres de la tienda física.">
             </div>
             <div class="carousel-item">
-                <img src="images/foto-local-provisional.webp" class="d-block w-100" alt="...">
+                <img src="images/foto-local-provisional.webp" class="d-block w-100" alt="Imágen de fondo del carrousel, en esta se visualiza una imágen de cómo el personal de la tienda asesora a los clientes de una forma comprensiva y cálida.">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -104,375 +103,379 @@
         </button>
     </div>
 
-    <!-- Carrousel de ropa de Bootstrap --- VISTA DESKTOP --- Cada SLIDE cuenta con 5 cards distintas, las cuales serán prendas de ropa. -->
+    <main>
 
-    <section id="carrousel-ropa-desktop">
+        <!-- Carrousel de ropa de Bootstrap --- VISTA DESKTOP --- Cada SLIDE cuenta con 5 cards distintas, las cuales serán prendas de ropa. -->
+         
+        <section id="carrousel-ropa-desktop">
 
-        <div class="container-carrousel-scroll">
+            <div class="container-carrousel-scroll">
 
-            <div id="carouselExample-desktop" class="carousel slide">
+                <div id="carouselExample-desktop" class="carousel slide">
 
-                <div class="carousel-inner">
+                    <div class="carousel-inner">
 
-                    <!-- SLIDE 1 -->
-                    <div class="carousel-item active">
+                        <!-- SLIDE 1 -->
+                        <div class="carousel-item active">
 
-                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+                            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
 
-                            <!-- 5 CARDS -->
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
+                                <!-- 5 CARDS -->
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa" alt="Imágen de un pantalón de jean azul oscuro"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa" alt="Imágen de una remera mangas cortas roja"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa" alt="imágen de una camisa de lino blanca"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa" alt="imágen de un buzo de friza negro y blanco oversize"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa" alt="Imágen de una chomba mangas cortas rayada, roja y azul"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
 
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>
+                        </div>
 
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- SLIDE 2 -->
+                        <div class="carousel-item">
 
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
 
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
+                                <!-- otras 5 cards -->
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa" alt="imágen de un pantalón de jogging negro"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa" alt="Imágen de una campera de jean azul"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa" alt="Imágen de un chaleco inflable"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa" alt="Imágen de una campera inflable"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa" alt="Imágen de una gorra"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
 
                         </div>
 
                     </div>
 
-                    <!-- SLIDE 2 -->
-                    <div class="carousel-item">
-
-                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
-
-                            <!-- otras 5 cards -->
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample-desktop" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample-desktop" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
 
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample-desktop" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample-desktop" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-
             </div>
+        </section>
 
-        </div>
-    </section>
+        <!-- Carrousel de ropa de Bootstrap --- VISTA TABLET --- Cada SLIDE cuenta con 2 cards distintas, las cuales serán prendas de ropa. -->
 
-    <!-- Carrousel de ropa de Bootstrap --- VISTA TABLET --- Cada SLIDE cuenta con 2 cards distintas, las cuales serán prendas de ropa. -->
+        <section id="carrousel-ropa-tablet">
 
-    <section id="carrousel-ropa-tablet">
+            <div class="container-carrousel-scroll">
 
-        <div class="container-carrousel-scroll">
+                <div id="carouselExample-tablet" class="carousel slide">
 
-            <div id="carouselExample-tablet" class="carousel slide">
+                    <div class="carousel-inner">
 
-                <div class="carousel-inner">
+                        <!-- SLIDE 1 -->
+                        <div class="carousel-item active">
 
-                    <!-- SLIDE 1 -->
-                    <div class="carousel-item active">
+                            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
 
-                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
-
-                            <!-- 2 CARDS -->
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
+                                <!-- 2 CARDS -->
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa" alt="Imágen de un pantalón de jean azul oscuro"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 2 -->
-                    <div class="carousel-item">
-
-                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
-
-                            <!-- otras 2 cards -->
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa" alt="Imágen de una remera mangas cortas roja"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample-tablet" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample-tablet" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                        <!-- SLIDE 2 -->
+                        <div class="carousel-item">
 
-            </div>
+                            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
 
-        </div>
-    </section>
+                                <!-- otras 2 cards -->
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa" alt="imágen de una camisa de lino blanca"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-    <!-- Carrousel de ropa de Bootstrap --- VISTA MOBILE -- Se incluye solo 1 Card por SLIDE, de forma que el carrousel pase de a una card y no solo las primeras de cada SLIDE. -->
-
-    <section id="carrousel-ropa-mobile">
-
-        <div class="container-carrousel-scroll">
-
-            <div id="carouselExample-mobile" class="carousel slide">
-
-                <div class="carousel-inner">
-
-                    <!-- SLIDE 1 / CARD 1-->
-                    <div class="carousel-item active">
-
-                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
-
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa" alt="imágen de un buzo de friza negro y blanco oversize"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        
                         </div>
-
                     </div>
 
-                    <!-- SLIDE 2 / card 2 -->
-                    <div class="carousel-item">
-
-                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
-
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>    
-
-                        </div>
-
-                    </div>
-
-                    <!-- SLIDE 3 / CARD 3 -->
-
-                    <div class="carousel-item">
-
-                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
-
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>    
-
-                        </div>
-
-                    </div>
-
-                    <!-- SLIDE 4 / CARD 4 -->
-
-                    <div class="carousel-item">
-
-                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
-
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>    
-
-                        </div>
-
-                    </div>
-
-                    <!-- SLIDE 5 / CARD 5 -->
-
-                    <div class="carousel-item">
-
-                        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
-
-                            <div class="col">
-                                <div class="card ropa-card">
-                                    <a href=""><img src="images/foto-remera.webp" class="card-img-top img-ropa"></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Precio: $14,500</p>
-                                    </div>
-                                </div>
-                            </div>    
-
-                        </div>
-
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample-tablet" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample-tablet" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
 
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample-mobile" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample-mobile" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+            </div>
+        </section>
+
+        <!-- Carrousel de ropa de Bootstrap --- VISTA MOBILE -- Se incluye solo 1 Card por SLIDE, de forma que el carrousel pase de a una card y no solo las primeras de cada SLIDE. -->
+
+        <section id="carrousel-ropa-mobile">
+
+            <div class="container-carrousel-scroll">
+
+                <div id="carouselExample-mobile" class="carousel slide">
+
+                    <div class="carousel-inner">
+
+                        <!-- SLIDE 1 / CARD 1-->
+                        <div class="carousel-item active">
+
+                            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa" alt="Imágen de un pantalón de jean azul oscuro"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+
+                        </div>
+
+                        <!-- SLIDE 2 / card 2 -->
+                        <div class="carousel-item">
+
+                            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa" alt="Imágen de una remera mangas cortas roja"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>    
+
+                            </div>
+
+                        </div>
+
+                        <!-- SLIDE 3 / CARD 3 -->
+
+                        <div class="carousel-item">
+
+                            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-prueba.webp" class="card-img-top img-ropa" alt="imágen de una camisa de lino blanca"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>    
+
+                            </div>
+
+                        </div>
+
+                        <!-- SLIDE 4 / CARD 4 -->
+
+                        <div class="carousel-item">
+
+                            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-local-provisional.webp" class="card-img-top img-ropa" alt="imágen de un buzo de friza negro y blanco oversize"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>    
+
+                            </div>
+
+                        </div>
+
+                        <!-- SLIDE 5 / CARD 5 -->
+
+                        <div class="carousel-item">
+
+                            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-1">
+
+                                <div class="col">
+                                    <div class="card ropa-card">
+                                        <a href=""><img src="images/foto-remera.webp" class="card-img-top img-ropa" alt="Imágen de una gorra"></a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Precio: $14,500</p>
+                                        </div>
+                                    </div>
+                                </div>    
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample-mobile" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample-mobile" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
 
             </div>
-
-        </div>
-    </section>
+        </section>
+    
+    </main>
 
     <!-- Sección de beneficios, fija en cada página.-->
 
     <section class="seccion-beneficios">
 
         <div class="beneficio">
-            <img src="images/logo-black-truck.png" alt=""> <span> <strong>Envío gratis</strong> a partir de $100.000 </span>
+            <img src="images/logo-black-truck.png" alt="Logotipo de un camión de transportes negro, simbolizando el envío gratis"> <span> <strong>Envío gratis</strong> a partir de $100.000 </span>
         </div>
 
         <div class="beneficio">
-            <img src="images/logo-return-blackbox.png" alt=""> <span> <strong>Devolución gratis</strong> hasta los 30 días </span>
+            <img src="images/logo-return-blackbox.png" alt="Logotipo de una caja con un símbolo de retorno negros, simbolizando la devolución gratis"> <span> <strong>Devolución gratis</strong> hasta los 30 días </span>
         </div>
 
         <div class="beneficio">
-            <img src="images/logo-black-credit-card.png" alt=""> <span> <strong>Descuentos</strong> en efectivo y cuotas fijas</span>
+            <img src="images/logo-black-credit-card.png" alt="Logotipo de una tarjeta de credito negra, simbolizando los descuentos en tarjetas y en efectivo"> <span> <strong>Descuentos</strong> en efectivo y cuotas fijas</span>
         </div>
 
         <div class="beneficio">
-            <img src="images/logo-black-present.png" class="logo-present" alt=""> <span> <strong>Sorteos</strong> todas las semanas</span>
+            <img src="images/logo-black-present.png" class="logo-present" alt="Logotipo de un regalo negro, simbolizando los sorteos"> <span> <strong>Sorteos</strong> todas las semanas</span>
         </div>
         
     </section>

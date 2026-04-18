@@ -1,0 +1,80 @@
+// Variables 
+@use "../utilities/variables" as *;
+// Mixins
+@use "../utilities/mixins" as *;
+
+.header-catalogo {
+    column-gap: 6rem;
+}
+
+.menu-catalogo {
+    @include margin(null, null, null, 16rem, 16rem);
+
+    ul {
+        @include flex(null, null, null, 10rem);
+
+        .item-catalogo {
+
+            a {
+                @include text-style(5rem);
+                color: $color-secundario;
+                font-family: "Roboto", sans-serif;
+
+                &:hover {
+                    @include underline(none, underline, $color-primario, 0.8rem, 1.5rem);
+                    color: $color-secundario;
+                }
+
+                &:focus-visible {
+                    @include underline(none, underline, $color-primario, 0.8rem, 1.5rem);
+                    color: $color-secundario;
+                }
+            }
+        }
+    }
+
+    .fila-ropa-desktop {
+        max-width: 100%;
+        margin-top: 12rem;
+        padding-left: 16rem;
+
+        .col {
+            .ropa-card {
+                .img-catalogo {
+                    @include size(100%, 50rem !important);
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .fila-ropa-tablet {
+        display: none;
+    }
+
+    .fila-ropa-mobile {
+        display: none;
+    }
+
+    .btn-personalizado {
+        .btn {
+            @include margin(null, null, 58rem, 15rem);
+            border-radius: 10rem;
+            @include text-style(5rem, null, 500);
+            font-family: "Roboto", sans-serif;
+            color: $color-secundario;
+            @include padding(4rem);
+            width: 40rem;
+            background-color: $color-primario;
+            border: 1rem solid $color-secundario;
+
+            &:hover {
+                border: 1rem solid $color-primario;
+                color: $color-primario;
+                background-color: $color-secundario;
+            }
+        }
+    }
+
+
+}

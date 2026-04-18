@@ -151,7 +151,7 @@
         width: 32%;
 
         &:hover {
-            border: 3rem solid $color-secundario;
+            border: 1.5rem solid $color-secundario;
         }
     }
 
@@ -349,5 +349,104 @@
 
     .bloque-final {
         @extend .bloque-principio;
+    }
+
+    // Sección del CATÁLOGO || <main>
+
+    .menu-catalogo {
+        ul {
+            max-width: 100%;
+
+            .item-catalogo {
+
+                a {
+                    @include text-style(4.5rem);
+
+                    &:hover {
+                        @include underline(none, underline, $color-primario, 1rem, 1.5rem);
+                        color: $color-secundario;
+                    }
+
+                    &:focus-visible {
+                        @include underline(none, underline, $color-primario, 1rem, 1.5rem);
+                        color: $color-secundario;
+                    }
+                }
+            }
+        }
+        
+        .fila-ropa-desktop {
+            display: none;
+        }
+
+        .fila-ropa-tablet {
+            display: none;
+        }
+
+        .fila-ropa-mobile {
+            @include flex(column);
+            margin-top: 9rem;
+            max-width: 100%;
+
+            .col {
+                .ropa-card {
+                    .img-catalogo {
+                        @include size(100%, 50rem !important);
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        .btn-personalizado {
+            .btn {
+                transform: translateX(-110%);
+            }
+        }
+    }
+
+    // Sección del OUTLET || <main>
+
+    .outlet {
+        .fila-ropa-desktop {
+            display: none;
+        }
+        #fila-tablet {
+            display: none;
+        }
+
+        #fila-mobile {
+            @include flex(column);
+            margin-top: 9rem;
+            max-width: 100%;
+
+            .col {
+                .ropa-card {
+                    .img-catalogo {
+                        @include size(100%, 50rem !important);
+                        object-fit: cover;
+                    }
+                }
+
+                .card-body {
+                    .card-text {
+                        font-family: "Roboto", sans-serif;
+                        margin-bottom: 0.1rem;
+                        text-align: start;
+                        @include text-style(3.5rem);
+                    }
+                    .card-title {
+                        @include text-style(4.5rem);
+                        font-family: "Bungee", sans-serif;
+                    }
+                }
+            }
+        }
+
+        .btn-personalizado {
+            .btn {
+                transform: translateX(-110%);
+            }
+        }
     }
 }

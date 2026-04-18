@@ -1,0 +1,92 @@
+// Variables
+@use "../utilities/variables" as *;
+// Mixins
+@use "../utilities/mixins" as *;
+
+.outlet {
+    @include margin(0 auto, null, null, null, 16rem);
+    max-width: 100%;
+
+    h2 {
+        @include text-style(10rem);
+        @include margin(null, null, null, 18rem, 6rem);
+        font-family: "Bebas Neue", sans-serif;
+        text-align: center;
+
+        span {
+            display: inline-block;
+
+            &:hover {
+                @include underline(none, underline, none, 0.4rem, 2rem);
+                color: $color-primario;
+                transform: scale(1.3);
+                @include text-style(null, 0.3rem black);
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        @include text-style(6rem);
+        @include margin(null, null, null, 0, 18rem);
+    }
+
+    .fila-ropa-desktop {
+        max-width: 100%;
+        margin-top: 12rem;
+        padding-left: 16rem;
+
+        .col {
+            .ropa-card {
+                width: 70%;
+                cursor: pointer;
+                @include flex(column);
+
+                .img-catalogo {
+                    @include size(100%, 50rem !important);
+                    object-fit: cover;
+                }
+
+                .card-body {
+                    .card-title {
+                        @include text-style(4.5rem);
+                        font-family: "Bungee", sans-serif;
+                    }
+                    .card-text {
+                        font-family: "Roboto", sans-serif;
+                        margin-bottom: 0.1rem;
+                        text-align: start;
+                        @include text-style(3rem);
+                    }
+                }
+            }
+        }
+    }
+
+    .fila-ropa-mobile {
+        display: none;
+    }
+    .fila-ropa-tablet {
+        display: none;
+    }
+
+    .btn-personalizado {
+        .btn {
+            border-radius: 10rem;
+            @include text-style(5rem, null 500);
+            @include margin(null, null, 56rem, 15rem);
+            background-color: $color-primario;
+            border: 1rem solid $color-secundario;
+            color: $color-secundario;
+            padding: 4rem;
+            width: 40rem;
+
+            &:hover {
+                border: 1rem solid $color-primario;
+                color: $color-primario;
+                background-color: $color-secundario;
+            }
+        }
+    }
+}
